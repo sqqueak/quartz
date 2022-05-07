@@ -1,4 +1,4 @@
-name: Jacky Zhao
+name: Emily Yao
 enableToc: true
 openToc: false
 enableLinkPreview: true
@@ -6,12 +6,9 @@ enableLatex: true
 enableSPA: true
 enableContextualBacklinks: true
 description:
-  Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
-  Wikilink support, backlinks, local graph, tags, and link previews.
+  an indefinite WIP built with RBF from the heart
 page_title:
-  "🪴 Quartz 3.2"
+  "emilyyao.me"
 links:
-  - link_name: Twitter
-    link: https://twitter.com/_jzhao
   - link_name: Github
-    link: https://github.com/jackyzha0
+    link: https://github.com/heyitssqueak
