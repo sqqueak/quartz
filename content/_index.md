@@ -2,4 +2,30 @@
 title: emilyyao.me
 ---
 
-# i'm working on it!
+# hey, it's squeak!
+Welcome to my pothole of the internet. I'm Emily! My nickname is "*squeak*" — from which most of my usernames on the web are derived. This website is my growing [digital garden](https://maggieappleton.com/garden-history). My interests are in *robotics, machine learning, and internet privacy and security* and in my free time, I love reading historical fiction and listening to [copyrighted Nintendo music](https://youtu.be/HL9_xm5HwrE).
+
+# relevant
+- Check out my growing portfolio on [GitHub](https://github.com/heyitssqueak).
+- ~~Get ignored by~~ Add me on [LinkedIn](https://www.linkedin.com/in/emilyyao04/)!
+
+<!-- Here are some notable links for you to guide your way:
+- [Anything and everything](/stream) I write about, seperated into [academics](/academics), [worldbuilding](https://dream.emilyyao.me), and [blog posts](/writing)
+
+- The [Portfolio](/portfolio) and the [Anti-Portfolio](/anti-portfolio) -->
+
+<!-- - My ongoing [[projects]]! -->
+
+<!-- I enjoy meeting as many people as I can! If you want to recommend me a book or ask about my website, send me a chat through [Element](https://element.io) at `@squeakers:matrix.org`. -->
+
+<!-- # recent  
+For more information on the emojis (🌰, 🌿, 🥭), check [this](/stream) out.
+- 🌿 22-05-06 `::` [a few ramblings](/writing/slaughterhouse-five) about Kurt Vonnegut's *Slaughterhouse-Five* -->
+
+
+<!-- # WIP
+- set up worldbuilding @ dream.emilyyao.me
+- set up academic stuff @ wiki.emilyyao.me
+    - alter cactus theme to have graph
+    - test with lin alg notes
+- write a blog post about something ie make the website presentable with Content -->
