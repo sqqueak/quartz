@@ -4,7 +4,9 @@ openToc: false
 enableLinkPreview: true
 enableLatex: true
 enableSPA: true
+enableFooter: true
 enableContextualBacklinks: true
+enableRecentNotes: false
 description:
   an indefinite WIP built with RBF from the heart
 page_title:
