@@ -3,11 +3,16 @@ title: emilyyao.me
 ---
 
 # hey, it's squeak!
-Welcome to my pothole of the internet. I'm Emily! My nickname is "*squeak*" — from which most of my usernames on the web are derived. This website is my growing [digital garden](https://maggieappleton.com/garden-history). My interests are in *robotics, machine learning, and internet privacy and security* and in my free time, I love reading historical fiction and listening to [copyrighted Nintendo music](https://youtu.be/HL9_xm5HwrE).
+Welcome to my pothole of the internet. I'm Emily! My nickname is "*squeak*" — from which most of my usernames on the web are derived. I'm currently a first-year at UW-Madison interested in *robotics, machine learning, and internet privacy*. In my free time, I love reading historical fiction and listening to [copyrighted Nintendo music](https://youtu.be/HL9_xm5HwrE).
 
 # relevant
 - Check out my growing portfolio on [GitHub](https://github.com/heyitssqueak).
-- ~~Get ignored by~~ Add me on [LinkedIn](https://www.linkedin.com/in/emilyyao04/)!
+- ~~Get ignored by~~ Add me on [LinkedIn](https://www.linkedin.com/in/emilyyao04/).
+- Say hello! `eyao#0712` / `@squeakers:matrix.org` / `hello [at] emilyyao.me`
+
+# recent
+Check out the [stream](/stream.md)!
+- 🥭 22-06-11 `::` [the beginning](/2022-sea1.md) of my summer learning quest
 
 <!-- Here are some notable links for you to guide your way:
 - [Anything and everything](/stream) I write about, seperated into [academics](/academics), [worldbuilding](https://dream.emilyyao.me), and [blog posts](/writing)
