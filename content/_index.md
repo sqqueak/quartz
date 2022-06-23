@@ -14,6 +14,8 @@ If you're looking for my notes, check out [wiki.emilyyao.me](https://wiki.emilyy
 
 # recent
 Check out the [stream](/stream.md)!
+<!-- - 🌰 22-06-21 `::` [honk honk](/2022-sea2.md) honk -->
+- 🌿 22-06-22 `::` [notes](/notes/cs220.md) from CS 220
 - 🥭 22-06-11 `::` [the beginning](/2022-sea1.md) of my summer learning quest
 
 <!-- Here are some notable links for you to guide your way:
