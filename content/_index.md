@@ -10,13 +10,13 @@ If you're looking for my notes, check out [wiki.emilyyao.me](https://wiki.emilyy
 # relevant
 - Check out my growing portfolio on [GitHub](https://github.com/heyitssqueak).
 - ~~Get ignored by~~ Add me on [LinkedIn](https://www.linkedin.com/in/emilyyao04/).
-- Say hello! `eyao#0712` / `@squeakers:matrix.org` / `hello [at] emilyyao.me`
+- Say hello! `hello [at] emilyyao.me`
 
 # recent
 Check out the [stream](/stream.md)!
-<!-- - 🌰 22-06-21 `::` [honk honk](/2022-sea2.md) honk -->
-- 🌿 22-06-22 `::` [notes](/notes/cs220.md) from CS 220
-- 🥭 22-06-11 `::` [the beginning](/2022-sea1.md) of my summer learning quest
+- 🌿 ongoing `::` [notes](/notes/cs220.md) from CS 220
+- 🥭 22-06-26 `::` [SEA progress update](/2022-sea2.md) `(sea#2)`
+- 🥭 22-06-11 `::` [the beginning](/2022-sea1.md) of my summer learning quest `(sea#1)`
 
 <!-- Here are some notable links for you to guide your way:
 - [Anything and everything](/stream) I write about, seperated into [academics](/academics), [worldbuilding](https://dream.emilyyao.me), and [blog posts](/writing)
