@@ -14,7 +14,7 @@ If you're looking for my notes, check out [wiki.emilyyao.me](https://wiki.emilyy
 
 # recent
 Older posts: [stream](/stream.md).
-- 🌿 ongoing `::` [notes](/notes/6.042j.md) from 6.042J
+- 🌿 ongoing `::` [notes](/notes/6-042j.md) from 6.042J
 - 🌿 ongoing `::` [notes](/notes/cs220.md) from CS 220
 - 🥭 22-06-26 `::` [SEA progress update](/2022-sea2.md) `(sea#2)`
 - 🥭 22-06-11 `::` [the beginning](/2022-sea1.md) of my summer learning quest `(sea#1)`
