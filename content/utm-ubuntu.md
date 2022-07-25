@@ -1,5 +1,5 @@
 ---
-title: "Installing Ubuntu 22.04 on macOS Monterey using UTM"
+title: "Ubuntu 22.04 with UTM"
 ---
 - No easy way to dual boot with the M1 chips -- UTM is a software specifically for macOS to run VMs or emulate other machines
 - How to create a new Ubuntu VM:
