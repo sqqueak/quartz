@@ -26,3 +26,19 @@ df.iloc[0]  # returns 690.784168 -- "integer location 0"
 df.index[0] # returns Argentina -- index(key) at location 0
 df.name     # returns Chile
 ```
+
+- iterating through two lists using `zip`
+```python
+for (a, b) in zip(list_a, list_b)
+```
+
+- copying a tree and making changes at every leaf
+```python
+if is_leaf(t):
+        # return new leaf 
+    else:
+        new_branches = []
+        for branch in branches(t):
+            new_branches.append(<recursive call>)
+        return tree(label(t), new_branches)
+```

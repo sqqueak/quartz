@@ -12,8 +12,8 @@ If you're looking for my other website, go to [wiki.emilyyao.me](https://wiki.em
 # school
 
 # pages
-- [Notes](/academics.md): [CS 475](/notes/fa22/cs475.md), [ECE 252](/notes/fa22/ece252.md), 
-[ECE 537](/notes/fa22/ece537.md), [PHYSICS 201](/notes/fa22/physics201.md)
+- [Notes](/academics.md): [CS 475](/notes/fa22/cs475.md), [ECE 252](/notes/fa22/cs252.md), 
+[ECE 537](/notes/fa22/ece537.md), [PHYSICS 201](/notes/fa22/physics201.md), [ART HIST 104](/notes/fa22/arthist104.md)
 - [Posts](/stream.md)
 
 # recent

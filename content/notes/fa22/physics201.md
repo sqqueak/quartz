@@ -1,3 +1,3 @@
 ---
-title: "PHYSICS 201: General Physics"
+title: "PHYSICS 201"
 ---

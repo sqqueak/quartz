@@ -4,9 +4,10 @@ title: Notes
 
 ## fall 2022
 - [CS 475: Introduction to Combinatorics](/notes/fa22/cs475.md)
-- [ECE 252: Introduction to Computer Engineering](/notes/fa22/ece252.md)
+- [CS 252: Introduction to Computer Engineering](/notes/fa22/cs252.md)
 - [ECE 537: Communication Networks](/notes/fa22/ece537.md)
 - [PHYSICS 201: General Physics](/notes/fa22/physics201.md)
+- [ART HIST 104: The Art of Diversity](/notes/fa22/arthist104.md)
 
 ## summer 2022 (self-studied)
 - [CS 220: Data Programming I](/notes/cs220.md)
