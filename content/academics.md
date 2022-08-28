@@ -1,25 +1,14 @@
 ---
 title: Notes
 ---
-This branch (`emilyyao.me/notes/`) is used for notes that I take in class. Other content can be found [here](https://wiki.emilyyao.me).
 
-I'm currently taking classes that I find interesting or reviewing things I've previously learned.
+## fall 2022
+- [CS 475: Introduction to Combinatorics](/notes/fa22/cs475.md)
+- [ECE 252: Introduction to Computer Engineering](/notes/fa22/ece252.md)
+- [ECE 537: Communication Networks](/notes/fa22/ece537.md)
+- [PHYSICS 201: General Physics](/notes/fa22/physics201.md)
 
-## current
-- [6.042J: Mathematics for Computer Science](/notes/6-042j.md) `MIT`
-- [CS 61A: Structure and Interpretation of Computer Programs](/notes/cs61a.md) `Berkeley`
-
-## completed
-- [CS 220: Data Programming I](/notes/cs220.md) `UW-Madison`
-
-<!-- 
-considering taking myself:
-- ucb cs61b
-- ucb cs61c
-- mit signals 6.003
-- mit diffeq/linalg 2.087
-- mit intro to ml 6.036
-- mit linalg 18.06SC
-- caltech intro to ml
-- uw cs320
- -->
+## summer 2022 (self-studied)
+- [CS 220: Data Programming I](/notes/cs220.md)
+- [CS 61A: Structure and Interpretation of Computer Programs](/notes/cs61a.md) `unfinished`
+- [6.042J: Mathematics for Computer Science](/notes/6-042j.md) `unfinished`
