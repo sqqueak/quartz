@@ -84,7 +84,29 @@ title: "PHYSICS 201"
 -   A particle can have a constant velocity, which implies that it has a constant speed; however, constant speed does not imply constant velocity (magnitude can stay the same, but direction doesn’t always)
 -   Problem solving approach: conceptualize, categorize/simplify, analyze, finalize
 - **Average acceleration ($a_{x,avg}=\frac{\Delta v_x}{\Delta t}$):** measured in $\frac{m}{s^2}$ and describes the change in velocity over time
-	- **Instantaneous acceleration ($a_x=\frac{dv_x}{dt}$):**
+	- **Instantaneous acceleration ($a_x=\frac{dv_x}{dt}=\frac{d^2x}{dt^2}$):**
+	- Kinematics equations assumed to be true under constant acceleration:
+		- $v_{xf}=v_{xi}+a_xt$
+		- $x_f=x_i+\frac{1}{2}(v_{xi}+v_{xf})t$
+		- $x_f=x_i+v_{xi}t+\frac{1}{2}a_xt^2$
+		- $v_{xf}^2=v_{xi}^2+2a_x(x_f-x_i)$
+- If acceleration and velocity have the same sign, that means the particle is speeding up; if they have different signs, the particle is slowing down
+- A freely falling object is any object moving solely under the influence of gravity
+	- Acceleration due to gravity, or **free-fall acceleration**, is denoted with $g$, and is about $9.8 \frac{m}{s^2}$
+
+## ch3: vectors
+- Cartesian coordinates, also called rectangular coordinates, are expressed as $(x, y)$
+- Polar coordinates are measured in distance from the origin, and angle from the positive right axis -- $(r, \theta)$
+- **Scalars** consist of a single value with a unit but without a direction; **vectors** have number, unit (magnitude), and direction
+	- Vectors are comprised of *components*, which are the $x$ and $y$ vectors that make up the vector -- $A_x=A\cos\theta$, $A_y=A\sin\theta$
+- A **unit vector** is a dimensionless vector that has a magnitude of 1 -- it only specifies 1 unit of distance in a direction
+	- Common unit vectors include $\hat{i}$, $\hat{j}$, $\hat{k}$ for one unit in the $x$, $y$, and $z$ directions respectively
+	- Vectors can be added by adding their components together
+- Vectors can be added by using the head-to-tail method of placing the tail of a new vector at the tip of the last vector
+- ![[Pasted image 20220911112820.png]]
+	- Addition is commutative and associative
+	- Subtraction is adding a negative vector -- invert both the direction and magnitude of a vector to get its negative version
+- Scalar multiplication for vectors consists of multiplying the magnitude by a scalar value
 
 ## ch4: motion in two dimensions
 - **Position vector ($\vec{r}$):** $\vec{r}=x\vec{i}+y\vec{j}$;  location of the particle with respect to the origin of a coordinate system
@@ -106,3 +128,9 @@ title: "PHYSICS 201"
 	 - $h$ is the maximum height ($h=\frac{v_i^2\sin^2\theta_i}{2g}$), while $R$ is the horizontal range of the particle ($R=\frac{v_i^2\sin2\theta_i}{g}$)
 		 - $R$ is at its maximum when $\theta$ is 45 degrees
 		 ![different ranges at various angles](/images/physics201/angle-example.png)
+- Uniform circular motion describes when a particle is moving in a circular motion at a constant speed
+	- The direction of the velocity vector is always changing in circular motion, so an acceleration is present and points towards the center of the circle, perpendicular to the velocity vector
+- Acceleration in circular movement is defined by $a_c=\frac{v^2}{r}$, $a_c=r\omega^2$, also called **centripetal acceleration**
+	- The length of time it takes to complete one circle of rotation is called the **period** $T$ -- $T=\frac{2\pi r}{v}$
+	- **Angular speed** $\omega$ is measured in radians/second and is the inverse of $T$ -- $\omega=\frac{2\pi}{T}$
+	- $v=r\omega$: as radial position increases (away from the center), speed also increases
