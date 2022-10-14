@@ -1,7 +1,7 @@
 ---
 title: "CS 61A"
 ---
-Self-paced course taken summer '22, linked [here](FIX). Beginner programming course using Python -- teaches data abstraction, ... Great focus on shortcuts and problem-solving with code; has hints of competitive coding strategies. Texts used include *Composing Programs* by John DeNero. Completed homework linked [here](FIX).
+Self-paced course taken summer '22, linked [here](https://inst.eecs.berkeley.edu/~cs61a/fa21/). Beginner programming course using Python -- teaches data abstraction, ... Great focus on shortcuts and problem-solving with code; has hints of competitive coding strategies. Texts used include *Composing Programs* by John DeNero. Completed homework linked [here](https://github.com/heyitssqueak/classes/tree/master/cs61a).
 
 # content
 
