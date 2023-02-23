@@ -5,6 +5,12 @@ enableToc: false
 
 ## Python
 
+- list comprehensions are the bane of my existence
+```python
+# y satisfying both conditions
+[y for y in range(100) if y % 2 == 0 if y % 5 == 0]
+```
+
 - find the max and min of a Series
 ```python
 s = Series

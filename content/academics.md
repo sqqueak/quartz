@@ -7,14 +7,16 @@ enableToc: false
 All courses were taken at UW-Madison unless otherwise specified.
 
 # spring 2023
+- CS 577: Introduction to Algorithms
+- CS 540: Introduction to Artificial Intelligence
 - CS 354: Machine Organization and Programming
 - MATH 431: Introduction to the Theory of Probability
-- PHYSICS 202: General Physics
+- MATH 521: Analysis I
 
 # fall 2022
 - CS 475: Introduction to Combinatorics
 - CS 252: Introduction to Computer Engineering
-- ECE 537: Communication Networks
+- [ECE 537](/ece537): Communication Networks
 - PHYSICS 201: General Physics
 - MSE 299: Independent Study (ML4ER)
 
