@@ -1,17 +1,20 @@
 ---
 title: "coding shortcuts"
-enableToc: false
+enableToc: true
 ---
 
-## Python
+## zipped lists
+```python
+for (a, b) in zip(list_a, list_b)
+```
 
-- list comprehensions are the bane of my existence
+## list comprehensions are the bane of my existence
 ```python
 # y satisfying both conditions
 [y for y in range(100) if y % 2 == 0 if y % 5 == 0]
 ```
 
-- find the max and min of a Series
+## max and min of a Series
 ```python
 s = Series
 
@@ -21,7 +24,7 @@ s.min() # min value
 s.max() # max value
 ```
 
-- iloc, index, and name on a Series
+## iloc, index, and name on a Series
 ```python
 ###
 Argentina    690.784168
@@ -33,12 +36,7 @@ df.index[0] # returns Argentina -- index(key) at location 0
 df.name     # returns Chile
 ```
 
-- iterating through two lists using `zip`
-```python
-for (a, b) in zip(list_a, list_b)
-```
-
-- copying a tree and making changes at every leaf
+## copying a tree and making changes at every leaf
 ```python
 if is_leaf(t):
         # return new leaf 
