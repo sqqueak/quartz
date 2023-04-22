@@ -1,10 +1,13 @@
 ---
 title: "coding shortcuts"
-enableToc: true
+enableToc: false
 ---
 
+> [!warning] This page is broken
+
+
 ## zipped lists
-```python
+```python {title="hello"}
 for (a, b) in zip(list_a, list_b)
 ```
 
@@ -25,6 +28,7 @@ s.max() # max value
 ```
 
 ## iloc, index, and name on a Series
+
 ```python
 ###
 Argentina    690.784168
@@ -37,6 +41,7 @@ df.name     # returns Chile
 ```
 
 ## copying a tree and making changes at every leaf
+
 ```python
 if is_leaf(t):
         # return new leaf 
@@ -45,4 +50,8 @@ if is_leaf(t):
         for branch in branches(t):
             new_branches.append(<recursive call>)
         return tree(label(t), new_branches)
+```
+
+```html {title="layouts/partials/head.html", linenostart=15}
+<link rel="shortcut icon" href="icon.png" type="image/png">
 ```

@@ -1,5 +1,6 @@
 ---
 title: emilyyao.me
+enableToc: false
 ---
 
 # hey, it's squeak!
@@ -18,6 +19,10 @@ I like meeting interesting people! If you want to say hi or grab lunch with me, 
 - [Motion canvas](https://motioncanvas.io/) for math animations
 
 # pages
-[courses & academics](/academics) -- classes I've taken and other academic projects I'm involved in  
-[network analysis](/ece537) -- reflection on some reports I wrote  
-[coding shortcuts](/coding-shortcuts) -- basic stuff I keep looking up
+[courses & academics](/academics) -- classes I've taken and academic projects I'm involved in  
+[network analysis](/ece537) -- reflecting on some reports I wrote  
+[projects](/projects) -- writing about stuff I'm working on
+<!-- [coding shortcuts](/coding-shortcuts) -- basic stuff I keep looking up -->
+
+<!-- # writing
+[a tribute to  "*squeak*"]() -->

@@ -27,6 +27,6 @@ enableToc: false
 - **CS 300:** Programming I (SU '20)
 - **CS 400:** Programming II (FA '20)
 - **ECE 203:** Signals, Information, and Computation (SU '21)
-- **MATH 20804232:** Calculus and Analytic Geometry 2 (SU '21) `Madison College`
+- **MATH 20804232:** Calculus & Analytic Geometry 2 (SU '21) `Madison College`
 - **MATH 234:** Calculus - Functions of Several Variables (FA '21)
 - **MATH 341 (*Honors Accelerated*):** Linear Algebra (SP '22)
