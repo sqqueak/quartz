@@ -16,6 +16,7 @@ enableGitInfo = true
         ordered = true
         startLevel = 1
     [markup.highlight]
+        noClasses = false
         anchorLineNos = false
         codeFences = true
         guessSyntax = true

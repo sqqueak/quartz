@@ -19,10 +19,6 @@ I like meeting interesting people! If you want to say hi or grab lunch with me, 
 - [Motion canvas](https://motioncanvas.io/) for math animations
 
 # pages
-[courses & academics](/academics) -- classes I've taken and academic projects I'm involved in  
-[network analysis](/ece537) -- reflecting on some reports I wrote  
+[courses & academics](/academics) -- classes and other things I've been involved in  
+[network analysis](/ece537) -- summary + reflection about a project on computer networks  
 [project archive](/projects) -- writing about stuff I'm working on
-<!-- [coding shortcuts](/coding-shortcuts) -- basic stuff I keep looking up -->
-
-<!-- # writing
-[a tribute to  "*squeak*"]() -->
