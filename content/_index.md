@@ -10,14 +10,14 @@ My main hobby is puzzle-solving, which is where all my other interests stem from
 
 I like meeting interesting people! If you want to say hi or grab lunch with me, send an email at `hello at emilyyao dot me`!
 
-# projects...
+<!-- # projects...
 - Split wireless Lily58 Pro keyboard
 - [Flipper zero](https://flipperzero.one/)
 - Concept maps similar to [this](https://live.staticflickr.com/272/32264483720_c51bdde679_b.jpg)
     - TCP/IP
     - heaps n' caches
 - [Motion canvas](https://motioncanvas.io/) for math animations
-- [micromouse](https://www.youtube.com/watch?v=ZMQbHMgK2rw)
+- [micromouse](https://www.youtube.com/watch?v=ZMQbHMgK2rw) -->
 
 # pages
 [courses & academics](/academics) -- classes and other things I've been involved in  

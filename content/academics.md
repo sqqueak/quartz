@@ -5,7 +5,7 @@ enableToc: false
 <!-- 
 # fall 2023
 &nbsp; &nbsp; ✏️ &nbsp; **CS 760:** Machine Learning  
-&nbsp; &nbsp; ✏️ &nbsp; **CS 352:** Digital System Fundamentals  
+&nbsp; &nbsp; ✏️ &nbsp; **CS 538:** Introduction to Theory and Design of Programming Languages  
 &nbsp; &nbsp; ✏️ &nbsp; **MATH 632 (*Honors*):** Introduction to Stochastic Processes  
 &nbsp; &nbsp; ✏️ &nbsp; **ECON 111 (*Honors Accelerated*):** Principles of Economics  
 &nbsp; &nbsp; ✏️ &nbsp; **HISTORY 143:** History of Race and Inequality in Urban America  
@@ -17,7 +17,7 @@ enableToc: false
 # spring 2023
 &nbsp; ✏️ &nbsp; **CS 354:** Machine Organization & Programming  
 &nbsp; ✏️ &nbsp; **CS 540:** Introduction to Artificial Intelligence  
-&nbsp; ✏️ &nbsp; **[CS 577](/cs577):** Introduction to Algorithms  
+&nbsp; ✏️ &nbsp; **CS 577:** Introduction to Algorithms  
 &nbsp; ✏️ &nbsp; **MATH 431:** Introduction to the Theory of Probability  
 &nbsp; ✏️ &nbsp; **MATH 521 (*Honors*):** Analysis I  
 &nbsp; 🔬 &nbsp; Research project: Testing parameters of stable diffusion models, learning to train LoRA stable diffusion models to emulate art styles. 
