@@ -16,3 +16,5 @@ Articles that I used:
 - https://bytexd.com/how-to-install-gnome-desktop-in-ubuntu/
 - the beginning of this video https://youtu.be/GjqeoC267FM
 - the middle of this video https://youtu.be/hnwK-nkXolc
+
+Updated 7/23: You can run an Ubuntu VM using Xcode with [this](https://developer.apple.com/documentation/virtualization/creating_and_running_a_linux_virtual_machine) tutorial 
