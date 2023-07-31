@@ -4,11 +4,12 @@ enableToc: false
 ---
 
 # hey, it's squeak!
-Welcome to my pothole of the Internet. I'm Emily! My nickname is "*squeak*" — from which most of my usernames on the web are derived. I'm currently an undergraduate student at UW-Madison studying computer science, mathematics, and economics. This summer I am working at [Mandli Communications](https://www.mandli.com/) as an SWE intern!
+Welcome to my pothole on the Internet. I'm Emily! My nickname is "*squeak*" — from which most of my usernames on the web are derived. I'm currently an undergraduate student at UW-Madison studying computer science, mathematics, and economics. This summer I am working at [Mandli Communications](https://www.mandli.com/) as an SWE intern!
 
-My main hobby is puzzle-solving, which is where all my other interests stem from. I like combinatorial math and competitive coding, among other topics such as [computer networks](/ece537), robotics, image processing, and [low-level computing](https://store.steampowered.com/app/370360/TIS100/). In my free time, I enjoy [reading](https://thebookerprizes.com/the-booker-library/books), playing poker, and listening to [video game music](https://youtu.be/HL9_xm5HwrE).
+My main hobby is puzzle-solving, which is where all my other interests stem from. I particularly enjoy competitive coding, among other computer science topics such as [computer networks](/ece537), image processing, robotics, and [low-level computing](https://store.steampowered.com/app/370360/TIS100/). In terms of math, my favorite subject is combinatorics, followed closely by probability theory and stochastic processes. In my free time, I like [reading](https://thebookerprizes.com/the-booker-library/books), playing poker, and listening to [video game music](https://youtu.be/HL9_xm5HwrE).
 
-I like meeting interesting people! If you want to say hi or grab lunch with me, send an email at `hello at emilyyao dot me`!
+I like meeting interesting people -- if you want to say hi or grab lunch with me, send an email at `hello at emilyyao dot me`!
+<!-- If you're on campus, feel free to drop by during my [office hours]() at the Undergraduate Project Lab! -->
 
 <!-- # projects...
 - Split wireless Lily58 Pro keyboard

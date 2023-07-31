@@ -22,14 +22,14 @@ enableToc: false
 ✏️ &nbsp; **CS 577:** Introduction to Algorithms  
 ✏️ &nbsp; **MATH 431:** Introduction to the Theory of Probability  
 ✏️ &nbsp; **MATH 521 (*Honors*):** Analysis I  
-🔬 &nbsp; Research project: Testing parameters of stable diffusion models, learning to train LoRA stable diffusion models to emulate art styles. 
+🔬 &nbsp; Research project: Training and optimizing AI image generation models on custom datasets. 
 
 # fall 2022
 ✏️ &nbsp; **CS 475:** Introduction to Combinatorics  
 ✏️ &nbsp; **CS 252:** Introduction to Computer Engineering  
 ✏️ &nbsp; **[ECE 537](/ece537):** Communication Networks  
 ✏️ &nbsp; **PHYSICS 201 (*Honors*):** General Physics  
-✏️ &nbsp; **MSE 299:** Independent Study -- Machine Learning for Engineering Research. Went through the basics of the ML workflow like cleaning data, training models, and optimization.
+✏️ &nbsp; **MSE 299:** Independent Study -- Machine Learning for Engineering Research. Learned basic ML workflow like cleaning data, training models, and optimization.
 
 # summer 2022 (self-studied)
 ✏️ &nbsp; **[CS 220](/notes/cs220):** Data Programming I  
