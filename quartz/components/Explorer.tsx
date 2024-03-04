@@ -41,7 +41,7 @@ const defaultOptions = {
   },
   // filterFn: (node) => node.name !== "tags",
   filterFn: (node) => {
-    const omit = new Set(["2022-sea1", "2022-sea2", "2022-sea3", "shortcuts", "utm-ubuntu", "notes", "resume"])
+    const omit = new Set(["2022-sea1", "2022-sea2", "2022-sea3", "shortcuts", "utm-ubuntu", "notes", "resume", "2023-sea1"])
     return !omit.has(node.name.toLowerCase())
   },
   order: ["filter", "map", "sort"],
