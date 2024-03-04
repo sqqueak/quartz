@@ -2,6 +2,28 @@
 title: Academics
 enableToc: false
 ---
+
+## personal review
+Ranking the major-relevant classes I've taken. I'm biased towards applied math and
+CS but I tend to stay away from AI/ML stuff because it's not my cup of tea.
+Not a definitive ranking, just what I liked learning about.
+### cs
+1. Compilers (CS 536)
+2. Communication Networks (ECE 537)
+3. Machine Organization \& Programming (CS 354)
+4. Programming Language Theory (CS 538)
+5. Parallel & Throughput-Optimized Programming (CS 639)
+6. Algorithms (CS 577)
+7. Artificial Intelligence (CS 540)
+### math
+1. Combinatorics (MATH 475) + Stochastic Processes (MATH 632)
+3. Probability Theory (MATH 431)
+4. Integer Optimization (MATH 728)
+5. Linear Optimization (MATH 525)
+6. Linear Algebra (MATH 341) + Analysis (MATH 521)
+
+---
+
 ## spring 2024
 ✏️  **CS 728: (*Graduate*)** Integer Optimization  
 ✏️  **CS 536:** Introduction to Compilers  
@@ -9,7 +31,8 @@ enableToc: false
 ✏️  **ECON 301:** Intermediate Economic Theory  
 ✏️  **ASIAN 357:** Japanese Ghost Stories  
 ✏️  **MUSIC 113:** Music in Performance    
-💼  System Administrator Intern `@` Morgridge Institute of Research
+💼  System Administrator Intern `@` Morgridge Institute of Research  
+💼  Peer Mentor `@` CS 538: Programming Language Theory
 
 ## fall 2023
 ✏️  **CS 538:** Introduction to Theory and Design of Programming Languages  
