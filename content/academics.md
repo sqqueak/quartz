@@ -10,8 +10,8 @@ Not a definitive ranking, just what I liked learning about.
 ### cs
 1. Compilers (CS 536)
 2. Communication Networks (ECE 537)
-3. Machine Organization \& Programming (CS 354)
-4. Programming Language Theory (CS 538)
+3. Theory \& Design of Programming Languages (CS 538)
+4. Machine Organization \& Programming (CS 354)
 5. Parallel & Throughput-Optimized Programming (CS 639)
 6. Algorithms (CS 577)
 7. Artificial Intelligence (CS 540)
@@ -32,10 +32,10 @@ Not a definitive ranking, just what I liked learning about.
 ✏️  **ASIAN 357:** Japanese Ghost Stories  
 ✏️  **MUSIC 113:** Music in Performance    
 💼  System Administrator Intern `@` Morgridge Institute of Research  
-💼  Peer Mentor `@` CS 538: Programming Language Theory
+💼  Peer Mentor `@` CS 538: Theory and Design of Programming Languages
 
 ## fall 2023
-✏️  **CS 538:** Introduction to Theory and Design of Programming Languages  
+✏️  **[CS 538](/cs538):** Introduction to Theory and Design of Programming Languages  
 ✏️  **MATH 525:** Introduction to Linear Optimization  
 ✏️  **MATH 632 (*Honors*):** Introduction to Stochastic Processes  
 ✏️  **ECON 111 (*Honors Accelerated*):** Principles of Economics  
