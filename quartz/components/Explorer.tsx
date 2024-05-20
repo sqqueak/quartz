@@ -13,12 +13,14 @@ const defaultOptions = {
   folderDefaultState: "collapsed",
   useSavedState: false,
   mapFn: (node) => {
-    if (node.name.toLowerCase() === "academics") {
-      node.displayName = "academics"
+    if (node.name.toLowerCase() === "uw-madison-course-review") {
+      node.displayName = "uw madison courses"
     } else if (node.name.toLowerCase() === "ece537") {
       node.displayName = "network analysis"
     } else if (node.name.toLowerCase() === "projects") {
       node.displayName = "projects"
+    } else if (node.name.toLowerCase() === "cs538") {
+      node.displayName = "cs538"
     }
     return node
   },
@@ -41,7 +43,7 @@ const defaultOptions = {
   },
   // filterFn: (node) => node.name !== "tags",
   filterFn: (node) => {
-    const omit = new Set(["2022-sea1", "2022-sea2", "2022-sea3", "shortcuts", "utm-ubuntu", "notes", "resume", "2023-sea1"])
+    const omit = new Set(["2022-sea1", "2022-sea2", "2022-sea3", "shortcuts", "utm-ubuntu", "notes", "resume", "2023-sea1", "cs538"])
     return !omit.has(node.name.toLowerCase())
   },
   order: ["filter", "map", "sort"],

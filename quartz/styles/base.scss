@@ -505,3 +505,15 @@ ol.overflow {
     padding-left: 1rem;
   }
 }
+
+details {
+  padding: 0.18rem 0rem;
+}
+
+details > summary {
+  list-style-type: '- ';
+}
+
+details[open] > summary {
+  list-style-type: '> ';
+}
