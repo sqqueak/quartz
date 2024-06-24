@@ -32,9 +32,9 @@ enableToc: false
 --- -->
 
 ## summer '24 (self-studied)
-\- **15-150:** Principles of Functional Programming `CMU`  
-\- **15-414:** Bug Catching: Automated Program Verification `CMU`  
 \- (💼) Consulting Engineer Intern `@` Cisco
+<!-- \- **15-150:** Principles of Functional Programming `CMU`  
+\- **15-414:** Bug Catching: Automated Program Verification `CMU`   -->
 
 ## spring '24
 \- **CS 536:** Introduction to Compilers **(^)**  
