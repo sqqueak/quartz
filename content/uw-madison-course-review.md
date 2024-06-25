@@ -32,6 +32,10 @@ enableToc: false
 --- -->
 
 ## summer '24 (self-studied)
+<!-- \- **15-150:** Principles of Functional Programming `CMU`  
+\- **15-414:** Bug Catching: Automated Program Verification `CMU`  
+\- **227-0003-10:** Digital Design and Computer Architecture Information `ETH Zurich`  
+\- **227-2210-00:** Computer Architecture Information `ETH Zurich`   -->
 \- (💼) Consulting Engineer Intern `@` Cisco
 <!-- \- **15-150:** Principles of Functional Programming `CMU`  
 \- **15-414:** Bug Catching: Automated Program Verification `CMU`   -->
