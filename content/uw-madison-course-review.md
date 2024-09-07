@@ -1,7 +1,11 @@
 ---
 title: UW-Madison Course Reviews
-enableToc: false
+enableToc: true
 ---
+
+This is a comprehensive list of every single class I've taken at UW-Madison. I intend for this post to give people an insight into how I balanced coursework with part-time work and extracurriculars as an undergraduate student. Each semester has a star rating assigned to it which corresponds with how difficult the semester was -- more stars imply greater difficulty. 
+
+I've denoted part-time work or internships I held during the semester as 💼 and research related projects as 🔬. I've also noted courses that I particularly enjoyed as (^), courses that were particularly time consuming as (!), and courses that I largely disliked as (.).
 
 <!-- ## overview
 **CS:**  
@@ -17,7 +21,7 @@ enableToc: false
 \- 577: Algorithms  
 \- 639: Parallel \& Throughput-Optimized Programming  
 \- 704: Principles of Programming Languages  
-\- 740: Computer Networks  
+\- 859: Systems Verification  
 
 **MATH:**  
 \- 234: Multivariable Calculus  
@@ -31,16 +35,16 @@ enableToc: false
 
 --- -->
 
-## summer '24 (self-studied)
-<!-- \- **15-150:** Principles of Functional Programming `CMU`  
-\- **15-414:** Bug Catching: Automated Program Verification `CMU`  
-\- **227-0003-10:** Digital Design and Computer Architecture Information `ETH Zurich`  
-\- **227-2210-00:** Computer Architecture Information `ETH Zurich`   -->
-\- (💼) Consulting Engineer Intern `@` Cisco
-<!-- \- **15-150:** Principles of Functional Programming `CMU`  
-\- **15-414:** Bug Catching: Automated Program Verification `CMU`   -->
+## fall '24
+\- **CS 704:** Principles of Programming Languages  
+\- **CS 839:** Systems Verification  
+\- **CS 537:** Introduction to Operating Systems  
+\- **CS 542:** Introduction to Software Security  
+\- **ECON 521:** Game Theory and Economic Analysis  
+\- (💼) Software Engineer Intern `@` Morgridge Institute of Research  
+\- (🔬) Research project: Developing software to visualize agricultural data. 
 
-## spring '24
+## spring '24 (*)
 \- **CS 536:** Introduction to Compilers **(^)**  
 \- **CS 639:** Parallel & Throughput-Optimized Programming **(.)**  
 \- **MATH 728:** Integer Optimization  
@@ -50,7 +54,7 @@ enableToc: false
 \- (💼) System Administrator Intern `@` Morgridge Institute of Research   
 \- (💼) TA `@` CS 538: Theory and Design of Programming Languages
 
-## fall '23
+## fall '23 (\*\***)
 \- **[CS 538](/cs538):** Introduction to Theory and Design of Programming Languages  
 \- **MATH 525:** Introduction to Linear Optimization **(!)**  
 \- **MATH 632:** Introduction to Stochastic Processes **(!^)**  
@@ -59,29 +63,20 @@ enableToc: false
 \- **MUSIC 113:** Music in Performance  
 \- (💼) System Administrator Intern `@` Morgridge Institute of Research   
 
-## summer '23 (self-studied)
-\- **[6.S191](/notes/6-s191):** Introduction to Deep Learning `MIT`  
-\- **[CS 544](/notes/cs544):** Introduction to Big Data Systems  
-\- (💼) Software Engineer Intern `@` Mandli Communications  
-
-## spring '23
+## spring '23 (***)
 \- **CS 354:** Machine Organization and Programming  
 \- **CS 540:** Introduction to Artificial Intelligence **(.)**  
 \- **CS 577:** Introduction to Algorithms  
 \- **MATH 431:** Introduction to the Theory of Probability  
 \- **MATH 521:** Analysis I **(!)**  
-\- (🔬) Research project: Training and optimizing image generation models on custom datasets. 
+\- (🔬) Research project: Training and optimizing image generation models. 
 
-## fall '22
+## fall '22 (*)
 \- **CS 252:** Introduction to Computer Engineering  
 \- **MATH 475:** Introduction to Combinatorics **(^)**  
 \- **[ECE 537](/ece537):** Communication Networks **(^)**  
 \- **PHYSICS 201:** General Physics  
-\- **MSE 299:** Independent Study -- Machine Learning for Engineering Research. Learned basic ML workflow like cleaning data, training models, and optimization.
-
-## summer '22 (self-studied)
-\- **[CS 220](/notes/cs220):** Data Programming I  
-\- **[CS 61A](/notes/cs61a):** Structure and Interpretation of Computer Programs `UC-Berkeley`  
+\- **MSE 299:** Independent Study -- Machine Learning for Engineering Research. Basic ML workflow like cleaning data, training models, and optimization.
 
 ## pre-college
 \- **CS 300:** Programming II (SU '20)  
