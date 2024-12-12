@@ -5,7 +5,7 @@ enableToc: true
 
 This is a comprehensive list of every single class I've taken at UW-Madison. I intend for this post to give people an insight into how I balanced coursework with part-time work and extracurriculars as an undergraduate student. Each semester has a star rating assigned to it which corresponds with how difficult the semester was -- more stars imply greater difficulty. 
 
-I've denoted part-time work or internships I held during the semester as 💼 and research related projects as 🔬. I've also noted courses that I particularly enjoyed as (^), courses that were particularly time consuming as (!), and courses that I largely disliked as (.).
+I've denoted part-time work or internships I held during the semester as 💼 and research related projects as 🔬. I've also noted courses that I particularly enjoyed as (^), courses that were particularly time consuming as (!), courses that I largely disliked as (.), and dropped courses as (D). 
 
 <!-- ## overview
 **CS:**  
@@ -35,12 +35,12 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 
 --- -->
 
-## fall '24
+## fall '24 (***)
 \- **CS 704:** Principles of Programming Languages  
 \- **CS 839:** Systems Verification  
-\- **CS 537:** Introduction to Operating Systems  
-\- **CS 542:** Introduction to Software Security  
-\- **ECON 521:** Game Theory and Economic Analysis  
+\- **CS 537:** Introduction to Operating Systems **(!)**  
+\- **CS 542:** Introduction to Software Security **(.)**  
+\- **ECON 521:** Game Theory and Economic Analysis **(D)**  
 \- (💼) Software Engineer Intern `@` Morgridge Institute of Research  
 \- (🔬) Research project: Developing software to visualize agricultural data. 
 
