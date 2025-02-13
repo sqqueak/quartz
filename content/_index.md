@@ -5,15 +5,17 @@ enableToc: false
 
 <!-- ## hey, it's squeak! -->
 ## about
-I'm a [student](/uw-madison-course-review) at the University of Wisconsin-Madison studying computer science and mathematics. My interests broadly cover low-level systems, particularly programming languages and compilers, but I also enjoy studying computer networks and operating systems.
+I'm a [student](/uw-madison-course-review) at the University of Wisconsin-Madison studying computer science and mathematics. My interests broadly cover low-level systems, particularly programming languages and compilers, but in the past I've also enjoyed studying computer networks and operating systems.
 
-My professional experience is comprised primarily of internships as I am still a student. I've have the wonderful privilege of working in a handful of different roles across various companies, including:
-- Two Sigma, incoming (Quant Dev)
-- Cisco (Consulting)
-- Morgridge Institute of Research (Sysadmin / Infrastructure)
-- Mandli Communications (App development)
+I've have the wonderful privilege of working in a handful of different roles across various institutions, including:
+- **Two Sigma**, incoming 
+- **Cisco** (Consulting)
+- **Morgridge Institute of Research** (Infrastructure tools)
+- **Mandli Communications** (Application development)
+- **madPL** (Zero-knowledge proofs, choreographies)
+- **UW CONNECT Lab** (Data visualization) 
 
-Outside of school/work, my main hobby is puzzle-solving. I like coding games, logic puzzles, and whatever [these](https://cdn.cs50.net/2020/x/events/puzzles/puzzles.pdf) are called. 
+Outside of school/work, my main hobby is puzzle-solving. I like [coding games](https://battlecode.org/), [logic puzzles](https://www.brainbashers.com/), and whatever [these](https://cdn.cs50.net/2020/x/events/puzzles/puzzles.pdf) are called. 
 
 <!-- I also like to [read](https://thebookerprizes.com/the-booker-library/books) and walk around outside. -->
 

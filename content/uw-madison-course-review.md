@@ -43,6 +43,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **HORT 240:** The Science of Cannabis    
 \- **MUSIC 113:** Music in Performance  
 \- (💼) SWE Intern, Morgridge Institute of Research  
+\- (🔬) Research, [madPL](https://madpl.cs.wisc.edu/): Zero-knowledge proofs & choreographies  
 
 ## fall '24 (***)
 \- **CS 704:** Principles of Programming Languages **(^)**  
@@ -85,7 +86,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **MATH 475:** Introduction to Combinatorics **(^)**  
 \- **[ECE 537](/ece537):** Communication Networks **(^)**  
 \- **PHYSICS 201:** General Physics **(.)**  
-\- **MSE 299:** (🔬) Independent Study, [ML4ER](https://skunkworks.engr.wisc.edu/informatics-skunkworks-education-course/): ML workflows
+\- (🔬) Research, [ML4ER](https://skunkworks.engr.wisc.edu/informatics-skunkworks-education-course/): ML workflows
 
 ## pre-college
 \- **CS 300:** Programming II (SU '20)  
