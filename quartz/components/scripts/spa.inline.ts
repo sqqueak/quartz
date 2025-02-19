@@ -1,5 +1,6 @@
 import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../../util/path"
+import { fetchCanonical } from "./util"
 
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
@@ -41,8 +42,9 @@ function notifyNav(url: FullSlug) {
 
 let p: DOMParser
 async function navigate(url: URL, isBack: boolean = false) {
+  startLoading()
   p = p || new DOMParser()
-  const contents = await fetch(`${url}`)
+  const contents = await fetchCanonical(url)
     .then((res) => {
       const contentType = res.headers.get("content-type")
       if (contentType?.startsWith("text/html")) {
@@ -97,6 +99,7 @@ async function navigate(url: URL, isBack: boolean = false) {
   if (!isBack) {
     history.pushState({}, "", url)
   }
+
   notifyNav(getFullSlug(window))
   delete announcer.dataset.persist
 }

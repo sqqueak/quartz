@@ -7,12 +7,13 @@ function PageTitle({ fileData, cfg, displayClass }: QuartzComponentProps) {
   return (
     <h1 class={`page-title ${displayClass ?? ""}`}>
       <a href={baseDir}>{title}</a>
-    </h1>
+    </h2>
   )
 }
 
 PageTitle.css = `
 .page-title {
+  font-size: 1.75rem;
   margin: 0;
 }
 `

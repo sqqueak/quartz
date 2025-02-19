@@ -18,7 +18,7 @@ const defaultOptions: Options = {
   oneLineTagDelim: ",",
 }
 
-export const FrontMatter: QuartzTransformerPlugin<Partial<Options> | undefined> = (userOpts) => {
+export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "FrontMatter",
@@ -66,6 +66,22 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options> | undefined> 
 
             // slug them all!!
             data.tags = [...new Set(data.tags?.map((tag: string) => slugTag(tag)))]
+
+            const socialImage = coalesceAliases(data, ["socialImage", "image", "cover"])
+
+            const created = coalesceAliases(data, ["created", "date"])
+            if (created) data.created = created
+            const modified = coalesceAliases(data, [
+              "modified",
+              "lastmod",
+              "updated",
+              "last-modified",
+            ])
+            if (modified) data.modified = modified
+            const published = coalesceAliases(data, ["published", "publishDate", "date"])
+            if (published) data.published = published
+
+            if (socialImage) data.socialImage = socialImage
 
             // fill in frontmatter
             file.data.frontmatter = data as QuartzPluginData["frontmatter"]

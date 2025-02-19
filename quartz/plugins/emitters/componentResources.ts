@@ -8,7 +8,6 @@ import popoverScript from "../../components/scripts/popover.inline"
 import styles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
-import { StaticResources } from "../../util/resources"
 import { QuartzComponent } from "../../components/types"
 import { googleFontHref, joinStyles } from "../../util/theme"
 import { Features, transform } from "lightningcss"
@@ -67,13 +66,8 @@ async function joinScripts(scripts: string[]): Promise<string> {
   return res.code
 }
 
-function addGlobalPageResources(
-  ctx: BuildCtx,
-  staticResources: StaticResources,
-  componentResources: ComponentResources,
-) {
+function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
-  const reloadScript = ctx.argv.serve
 
   // popovers
   if (cfg.enablePopovers) {
@@ -83,12 +77,12 @@ function addGlobalPageResources(
 
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId
-    staticResources.js.push({
-      src: `https://www.googletagmanager.com/gtag/js?id=${tagId}`,
-      contentType: "external",
-      loadTime: "afterDOMReady",
-    })
     componentResources.afterDOMLoaded.push(`
+      const gtagScript = document.createElement("script")
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=${tagId}"
+      gtagScript.async = true
+      document.head.appendChild(gtagScript)
+
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
@@ -124,6 +118,47 @@ function addGlobalPageResources(
   
       document.head.appendChild(umamiScript)
     `)
+  } else if (cfg.analytics?.provider === "goatcounter") {
+    componentResources.afterDOMLoaded.push(`
+      const goatcounterScript = document.createElement("script")
+      goatcounterScript.src = "${cfg.analytics.scriptSrc ?? "https://gc.zgo.at/count.js"}"
+      goatcounterScript.async = true
+      goatcounterScript.setAttribute("data-goatcounter",
+        "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count")
+      document.head.appendChild(goatcounterScript)
+    `)
+  } else if (cfg.analytics?.provider === "posthog") {
+    componentResources.afterDOMLoaded.push(`
+      const posthogScript = document.createElement("script")
+      posthogScript.innerHTML= \`!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('${cfg.analytics.apiKey}',{api_host:'${cfg.analytics.host ?? "https://app.posthog.com"}'})\`
+      document.head.appendChild(posthogScript)
+    `)
+  } else if (cfg.analytics?.provider === "tinylytics") {
+    const siteId = cfg.analytics.siteId
+    componentResources.afterDOMLoaded.push(`
+      const tinylyticsScript = document.createElement("script")
+      tinylyticsScript.src = "https://tinylytics.app/embed/${siteId}.js"
+      tinylyticsScript.defer = true
+      document.head.appendChild(tinylyticsScript)
+    `)
+  } else if (cfg.analytics?.provider === "cabin") {
+    componentResources.afterDOMLoaded.push(`
+      const cabinScript = document.createElement("script")
+      cabinScript.src = "${cfg.analytics.host ?? "https://scripts.withcabin.com"}/hello.js"
+      cabinScript.defer = true
+      cabinScript.async = true
+      document.head.appendChild(cabinScript)
+    `)
+  } else if (cfg.analytics?.provider === "clarity") {
+    componentResources.afterDOMLoaded.push(`
+      const clarityScript = document.createElement("script")
+      clarityScript.innerHTML= \`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "${cfg.analytics.projectId}");\`
+      document.head.appendChild(clarityScript)
+    `)
   }
 
   if (cfg.enableSPA) {
@@ -157,12 +192,9 @@ interface Options {
   fontOrigin: "googleFonts" | "local"
 }
 
-const defaultOptions: Options = {
-  fontOrigin: "googleFonts",
-}
-
-export const ComponentResources: QuartzEmitterPlugin<Options> = (opts?: Partial<Options>) => {
-  const { fontOrigin } = { ...defaultOptions, ...opts }
+// This emitter should not update the `resources` parameter. If it does, partial
+// rebuilds may not work as expected.
+export const ComponentResources: QuartzEmitterPlugin = () => {
   return {
     name: "ComponentResources",
     getQuartzComponents() {

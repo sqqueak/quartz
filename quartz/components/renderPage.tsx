@@ -13,20 +13,28 @@ interface RenderComponents {
   header: QuartzComponent[]
   beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
+  afterBody: QuartzComponent[]
   left: QuartzComponent[]
   right: QuartzComponent[]
   footer: QuartzComponent
 }
 
+const headerRegex = new RegExp(/h[1-6]/)
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
+  fileData: QuartzPluginData,
   staticResources: StaticResources,
 ): StaticResources {
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
-  return {
-    css: [joinSegments(baseDir, "index.css"), ...staticResources.css],
+  const resources: StaticResources = {
+    css: [
+      {
+        content: joinSegments(baseDir, "index.css"),
+      },
+      ...staticResources.css,
+    ],
     js: [
       {
         src: joinSegments(baseDir, "prescript.js"),
@@ -40,14 +48,28 @@ export function pageResources(
         script: contentIndexScript,
       },
       ...staticResources.js,
-      {
-        src: joinSegments(baseDir, "postscript.js"),
-        loadTime: "afterDOMReady",
-        moduleType: "module",
-        contentType: "external",
-      },
     ],
   }
+
+  if (fileData.hasMermaidDiagram) {
+    resources.js.push({
+      script: mermaidScript,
+      loadTime: "afterDOMReady",
+      moduleType: "module",
+      contentType: "inline",
+    })
+    resources.css.push({ content: mermaidStyle, inline: true })
+  }
+
+  // NOTE: we have to put this last to make sure spa.inline.ts is the last item.
+  resources.js.push({
+    src: joinSegments(baseDir, "postscript.js"),
+    loadTime: "afterDOMReady",
+    moduleType: "module",
+    contentType: "external",
+  })
+
+  return resources
 }
 
 let pageIndex: Map<FullSlug, QuartzPluginData> | undefined = undefined
@@ -109,18 +131,24 @@ export function renderPage(
           // header transclude
           blockRef = blockRef.slice(1)
           let startIdx = undefined
+          let startDepth = undefined
           let endIdx = undefined
           for (const [i, el] of page.htmlAst.children.entries()) {
-            if (el.type === "element" && el.tagName.match(/h[1-6]/)) {
-              if (endIdx) {
-                break
-              }
+            // skip non-headers
+            if (!(el.type === "element" && el.tagName.match(headerRegex))) continue
+            const depth = Number(el.tagName.substring(1))
 
-              if (startIdx !== undefined) {
-                endIdx = i
-              } else if (el.properties?.id === blockRef) {
+            // lookin for our blockref
+            if (startIdx === undefined || startDepth === undefined) {
+              // skip until we find the blockref that matches
+              if (el.properties?.id === blockRef) {
                 startIdx = i
+                startDepth = depth
               }
+            } else if (depth <= startDepth) {
+              // looking for new header that is same level or higher
+              endIdx = i
+              break
             }
           }
 
@@ -170,6 +198,7 @@ export function renderPage(
     header,
     beforeBody,
     pageBody: Content,
+    afterBody,
     left,
     right,
     footer: Footer,
@@ -214,10 +243,16 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
+              <hr />
+              <div class="page-footer">
+                {afterBody.map((BodyComponent) => (
+                  <BodyComponent {...componentData} />
+                ))}
+              </div>
             </div>
             {RightComponent}
+            <Footer {...componentData} />
           </Body>
-          <Footer {...componentData} />
         </div>
       </body>
       {pageResources.js

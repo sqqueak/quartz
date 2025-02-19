@@ -4,9 +4,9 @@ import { Date, getDate } from "./Date"
 import { QuartzComponentProps } from "./types"
 import { GlobalConfiguration } from "../cfg"
 
-export function byDateAndAlphabetical(
-  cfg: GlobalConfiguration,
-): (f1: QuartzPluginData, f2: QuartzPluginData) => number {
+export type SortFn = (f1: QuartzPluginData, f2: QuartzPluginData) => number
+
+export function byDateAndAlphabetical(cfg: GlobalConfiguration): SortFn {
   return (f1, f2) => {
     if (f1.dates && f2.dates) {
       // sort descending
@@ -27,6 +27,7 @@ export function byDateAndAlphabetical(
 
 type Props = {
   limit?: number
+  sort?: SortFn
 } & QuartzComponentProps
 
 export function PageList({ cfg, fileData, allFiles, limit }: Props) {
@@ -63,7 +64,7 @@ export function PageList({ cfg, fileData, allFiles, limit }: Props) {
                       class="internal tag-link"
                       href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
                     >
-                      #{tag}
+                      {tag}
                     </a>
                   </li>
                 ))}

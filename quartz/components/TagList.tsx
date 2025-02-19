@@ -8,12 +8,11 @@ function TagList({ fileData, displayClass }: QuartzComponentProps) {
     return (
       <ul class={`tags ${displayClass ?? ""}`}>
         {tags.map((tag) => {
-          const display = `#${tag}`
           const linkDest = baseDir + `/tags/${slugTag(tag)}`
           return (
             <li>
               <a href={linkDest} class="internal tag-link">
-                {display}
+                {tag}
               </a>
             </li>
           )
@@ -33,7 +32,6 @@ TagList.css = `
   gap: 0.4rem;
   margin: 1rem 0;
   flex-wrap: wrap;
-  justify-self: end;
 }
 
 .section-li > .section > .tags {

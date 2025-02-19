@@ -1,4 +1,4 @@
-import { formatDate, getDate } from "./Date"
+import { Date, getDate } from "./Date"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
 
@@ -20,11 +20,7 @@ export default (() => {
     }
   }
 
-  ContentMetadata.css = `
-  .content-meta {
-    margin-top: 0;
-    color: var(--gray);
-  }
-  `
+  ContentMetadata.css = style
+
   return ContentMetadata
 }) satisfies QuartzComponentConstructor
