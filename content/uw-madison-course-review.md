@@ -50,7 +50,8 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **CS 839:** Systems Verification  
 \- **CS 537:** Introduction to Operating Systems **(!)**  
 \- **CS 542:** Introduction to Software Security **(.)**  
-\- ~~**ECON 521:** Game Theory and Economic Analysis~~  
+<span class="sidenote">$^{\bold 1}$Dropped amidst recruitment season.</span>
+\- ~~**ECON 521:** Game Theory and Economic Analysis~~$^{\tiny\bold 1}$  
 \- (💼) SWE Intern, Morgridge Institute of Research  
 \- (🔬) Research, [UW CONNECT](https://uwconnect.ece.wisc.edu/): Data visualization
 
@@ -84,7 +85,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 ## fall '22 (*)
 \- **CS 252:** Introduction to Computer Engineering  
 \- **MATH 475:** Introduction to Combinatorics **(^)**  
-\- **[ECE 537](/ece537):** Communication Networks **(^)**  
+\- **ECE 537:** Communication Networks **(^)**  
 \- **PHYSICS 201:** General Physics **(.)**  
 \- (🔬) Research, [ML4ER](https://skunkworks.engr.wisc.edu/informatics-skunkworks-education-course/): ML workflows
 

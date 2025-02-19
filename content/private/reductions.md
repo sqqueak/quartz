@@ -1,5 +1,0 @@
----
-title: "reductions"
----
-
-# algorithms suffering
