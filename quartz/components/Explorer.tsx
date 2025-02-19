@@ -1,28 +1,29 @@
-import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import explorerStyle from "./styles/explorer.scss"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import style from "./styles/explorer.scss"
 
 // @ts-ignore
 import script from "./scripts/explorer.inline"
 import { ExplorerNode, FileNode, Options } from "./ExplorerNode"
 import { QuartzPluginData } from "../plugins/vfile"
+import { classNames } from "../util/lang"
+import { i18n } from "../i18n"
 
 // Options interface defined in `ExplorerNode` to avoid circular dependency
 const defaultOptions = {
-  title: "Explorer",
   folderClickBehavior: "collapse",
   folderDefaultState: "collapsed",
   useSavedState: false,
   mapFn: (node) => {
     if (node.name.toLowerCase() === "uw-madison-course-review") {
       node.displayName = "uw madison courses"
-    } else if (node.name.toLowerCase() === "ece537") {
-      node.displayName = "network analysis"
-    } else if (node.name.toLowerCase() === "projects") {
-      node.displayName = "projects"
-    } else if (node.name.toLowerCase() === "cs538") {
-      node.displayName = "cs538"
     }
-    return node
+    // } else if (node.name.toLowerCase() === "ece537") {
+    //   node.displayName = "network analysis"
+    // } else if (node.name.toLowerCase() === "projects") {
+    //   node.displayName = "projects"
+    // } else if (node.name.toLowerCase() === "cs538") {
+    //   node.displayName = "cs538"
+    // }
   },
   sortFn: (a, b) => {
     // Sort order: folders first, then files. Sort folders and files alphabetically
@@ -43,9 +44,9 @@ const defaultOptions = {
   },
   // filterFn: (node) => node.name !== "tags",
   filterFn: (node) => {
-    const omit = new Set(["2022-sea1", "2022-sea2", "2022-sea3", "shortcuts", "utm-ubuntu", "notes", "resume", "2023-sea1", "cs538"])
+    const omit = new Set(["2022-sea1", "2022-sea2", "2022-sea3", "shortcuts", "utm-ubuntu", "notes", "resume", "2023-sea1", "cs538", "ece537"])
     return !omit.has(node.name.toLowerCase())
-  },
+  },  
   order: ["filter", "map", "sort"],
 } satisfies Options
 
@@ -79,16 +80,24 @@ export default ((userOpts?: Partial<Options>) => {
     }
 
     // Get all folders of tree. Initialize with collapsed state
-    const folders = fileTree.getFolderPaths(opts.folderDefaultState === "collapsed")
-
     // Stringify to pass json tree as data attribute ([data-tree])
+    const folders = fileTree.getFolderPaths(opts.folderDefaultState === "collapsed")
     jsonTree = JSON.stringify(folders)
   }
 
-  function Explorer({ allFiles, displayClass, fileData }: QuartzComponentProps) {
-    constructFileTree(allFiles)
+  const Explorer: QuartzComponent = ({
+    ctx,
+    cfg,
+    allFiles,
+    displayClass,
+    fileData,
+  }: QuartzComponentProps) => {
+    if (ctx.buildId !== lastBuildId) {
+      lastBuildId = ctx.buildId
+      constructFileTree(allFiles)
+    }
     return (
-      <div class={`explorer ${displayClass ?? ""}`}>
+      <div class={classNames(displayClass, "explorer")}>
         <button
           type="button"
           id="mobile-explorer"
@@ -128,7 +137,7 @@ export default ((userOpts?: Partial<Options>) => {
           aria-controls="explorer-content"
           aria-expanded={true}
         >
-          <h1>{opts.title}</h1>
+          <h2>{opts.title ?? i18n(cfg.locale).components.explorer.title}</h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"

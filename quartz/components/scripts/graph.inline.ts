@@ -591,15 +591,18 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     }
   }
 
-  registerEscapeHandler(container, hideGlobalGraph)
-}
-
-document.addEventListener("nav", async (e: unknown) => {
-  const slug = (e as CustomEventMap["nav"]).detail.url
-  addToVisited(slug)
-  await renderGraph("graph-container", slug)
+  async function shortcutHandler(e: HTMLElementEventMap["keydown"]) {
+    if (e.key === "g" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
+      e.preventDefault()
+      const globalGraphOpen = container?.classList.contains("active")
+      globalGraphOpen ? hideGlobalGraph() : renderGlobalGraph()
+    }
+  }
 
   const containerIcon = document.getElementById("global-graph-icon")
-  containerIcon?.removeEventListener("click", renderGlobalGraph)
   containerIcon?.addEventListener("click", renderGlobalGraph)
+  window.addCleanup(() => containerIcon?.removeEventListener("click", renderGlobalGraph))
+
+  document.addEventListener("keydown", shortcutHandler)
+  window.addCleanup(() => document.removeEventListener("keydown", shortcutHandler))
 })

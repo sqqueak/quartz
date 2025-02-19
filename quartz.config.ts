@@ -12,8 +12,10 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     generateSocialImages: false,
     theme: {
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
       typography: {
-        header: "IBM Plex Mono",
+        header: "Fraunces",
         body: "IBM Plex Mono",
         code: "IBM Plex Mono",
       },
@@ -27,6 +29,7 @@ const config: QuartzConfig = {
           secondary: "#e48c00",
           tertiary: "#ad6a00",
           highlight: "#fbf5ef",
+          textHighlight: "#ffffff",
         },
         darkMode: {
           light: "#1e1e21",
@@ -37,9 +40,11 @@ const config: QuartzConfig = {
           secondary: "#52a16a",
           tertiary: "#3b8050",
           highlight: "#1e1e21",
+          textHighlight: "#ffffff",
         },
       },
     },
+    locale: "en-US"
   },
   plugins: {
     transformers: [

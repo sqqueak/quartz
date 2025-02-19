@@ -6,7 +6,6 @@
 
 html {
   scroll-behavior: smooth;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
   overflow-x: hidden;
   width: 100vw;
@@ -27,7 +26,7 @@ section {
   border-radius: 5px;
 }
 ::selection {
-  background: color-mix(in srgb, var(--tertiary) 75%, transparent);
+  background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
 }
 
@@ -66,12 +65,15 @@ ul,
   }
 }
 
+strong {
+  font-weight: $semiBoldWeight;
+}
+
 a {
-  font-weight: 600;
+  font-weight: $semiBoldWeight;
   text-decoration: none;
   transition: color 0.2s ease;
   color: var(--secondary);
-  display: inline-block;
 
   &:hover {
     color: var(--tertiary) !important;
@@ -82,6 +84,7 @@ a {
     background-color: var(--highlight);
     padding: 0 0.1rem;
     border-radius: 5px;
+    line-height: 1.4rem;
 
     &:has(> img) {
       background-color: transparent;
@@ -205,10 +208,24 @@ a {
     }
 
     & .sidebar.right {
-      right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
-      & > * {
-        @media all and (max-width: $fullPageWidth) {
+      grid-area: grid-sidebar-right;
+      margin-right: 0;
+      flex-direction: column;
+      @media all and ($mobile) {
+        margin-left: inherit;
+        margin-right: inherit;
+      }
+      @media all and not ($desktop) {
+        position: initial;
+        height: unset;
+        width: 100%;
+        flex-direction: row;
+        padding: 0;
+        & > * {
           flex: 1;
+        }
+        & > .toc {
+          display: none;
         }
       }
     }
@@ -310,11 +327,9 @@ thead {
   font-weight: revert;
   margin-bottom: 0;
 
-  article > & > a {
+  article > & > a[role="anchor"] {
     color: var(--dark);
-    &.internal {
-      background-color: transparent;
-    }
+    background-color: transparent;
   }
 }
 
@@ -329,7 +344,6 @@ h6 {
     opacity: 0;
     transition: opacity 0.2s ease;
     transform: translateY(-0.1rem);
-    display: inline-block;
     font-family: var(--codeFont);
     user-select: none;
   }
@@ -408,6 +422,7 @@ pre {
     counter-increment: line 0;
     display: grid;
     padding: 0.5rem 0;
+    overflow-x: auto;
 
     & [data-highlighted-chars] {
       background-color: var(--highlight);
@@ -562,6 +577,30 @@ ol.overflow {
   ul {
     padding-left: 1rem;
   }
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.external-embed.youtube,
+iframe.pdf {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.navigation-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--secondary);
+  transition: width 0.2s ease;
+  z-index: 9999;
 }
 
 details {

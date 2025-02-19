@@ -16,7 +16,7 @@ document.addEventListener("nav", () => {
       button.type = "button"
       button.innerHTML = svgCopy
       button.ariaLabel = "Copy source"
-      button.addEventListener("click", () => {
+      function onClick() {
         navigator.clipboard.writeText(source).then(
           () => {
             button.blur()
@@ -28,7 +28,9 @@ document.addEventListener("nav", () => {
           },
           (error) => console.error(error),
         )
-      })
+      }
+      button.addEventListener("click", onClick)
+      window.addCleanup(() => button.removeEventListener("click", onClick))
       els[i].prepend(button)
     }
   }
