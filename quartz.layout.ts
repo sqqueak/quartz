@@ -17,7 +17,6 @@ export const sharedPageComponents: SharedLayout = {
         category: 'Announcements',
         // from data-category-id
         categoryId: 'DIC_kwDOLaURac4CpEN9',
-        darkTheme: 'dark',
       }
     }),
   ],  
@@ -25,7 +24,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/sqqueak",
       LinkedIn: "https://www.linkedin.com/in/emilyyao04/",
-      UPL: "https://www.upl.cs.wisc.edu/",
+      UPL: "https://www.upl.cs.wisc.edu",
     },
   }),
 }
