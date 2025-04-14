@@ -1,6 +1,7 @@
 ---
 title: emilyyao.me
 enableToc: false
+comments: false
 ---
 
 <!-- ## hey, it's squeak! -->
