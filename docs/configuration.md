@@ -35,9 +35,10 @@ This part of the configuration concerns anything that can affect the whole site.
 - `defaultDateType`: whether to use created, modified, or published as the default date to display on pages and page listings.
 - `theme`: configure how the site looks.
   - `typography`: what fonts to use. Any font available on [Google Fonts](https://fonts.google.com/) works here.
-    - `header`: Font to use for headers
-    - `code`: Font for inline and block quotes.
-    - `body`: Font for everything
+    - `title`: font for the title of the site (optional, same as `header` by default)
+    - `header`: font to use for headers
+    - `code`: font for inline and block quotes
+    - `body`: font for everything
   - `colors`: controls the theming of the site.
     - `light`: page background
     - `lightgray`: borders
