@@ -10,13 +10,13 @@ export const sharedPageComponents: SharedLayout = {
       provider: 'giscus',
       options: {
         // from data-repo
-        repo: 'sqqueak/obsidian',
+        repo: 'sqqueak/quartz',
         // from data-repo-id
-        repoId: 'R_kgDOLaURaQ',
+        repoId: 'R_kgDOHS2WAw',
         // from data-category
         category: 'Announcements',
         // from data-category-id
-        categoryId: 'DIC_kwDOLaURac4CpEN9',
+        categoryId: 'DIC_kwDOHS2WA84CpESS',
       }
     }),
   ],  
