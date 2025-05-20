@@ -5,7 +5,7 @@ comments: false
 ---
 
 ## about
-I am a [student](/uw-madison-course-review) at the University of Wisconsin-Madison studying computer science and mathematics. I'm mainly  interested in programming languages and compilers, among other low-level topics like operating systems and computer networks. I'm also currently part of the [madPL](https://madpl.cs.wisc.edu/) group, advised by [Ethan Cecchetti](https://cecchetti.sites.cs.wisc.edu/).
+I am a [student](/uw-madison-course-review) at the University of Wisconsin-Madison studying computer science and mathematics. I'm mainly interested in programming languages and compilers, among other low-level topics like operating systems and computer networks. I'm also currently part of the [madPL](https://madpl.cs.wisc.edu/) group, advised by [Ethan Cecchetti](https://cecchetti.sites.cs.wisc.edu/).
 
 I've have the wonderful privilege of working in a handful of different roles across various institutions, including:
 - **Two Sigma** (Low-latency trading systems) 
