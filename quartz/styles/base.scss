@@ -43,7 +43,7 @@ ul,
 .math {
   color: var(--darkgray);
   fill: var(--darkgray);
-  hyphens: auto;
+  font-size: 0.9rem;
 }
 
 p,
@@ -382,8 +382,8 @@ h1 {
 
 h2 {
   font-size: 1.4rem;
-  margin-top: 1.9rem;
-  margin-bottom: 1rem;
+  margin-top: 1.6rem;
+  margin-bottom: -0.5rem;
 }
 
 h3 {
@@ -492,7 +492,7 @@ code {
 tbody,
 li,
 p {
-  line-height: 1.6rem;
+  line-height: 1.4rem;
 }
 
 .table-container {

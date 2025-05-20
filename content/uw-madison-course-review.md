@@ -35,15 +35,14 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- 728: Integer Optimization
 
 --- -->
-
-## spring '25 (~)
+## spring '25 (*)
 \- **CS 642:** Introduction to Information Security  
 \- **ECON 302:** Intermediate Macroeconomic Theory  
 \- **CLASSICS 270:** Classical Mythology    
 \- **HORT 240:** The Science of Cannabis    
 \- **MUSIC 113:** Music in Performance  
-\- (💼) SWE Intern, Morgridge Institute of Research  
-\- (🔬) Research, [madPL](https://madpl.cs.wisc.edu/): Zero-knowledge proofs & choreographies  
+\- (💼) SWE Intern, Center for High-Throughput Computing  
+\- (🔬) Research, [madPL](https://madpl.cs.wisc.edu/): Proving confluence over language syntax  
 
 ## fall '24 (***)
 \- **CS 704:** Principles of Programming Languages **(^)**  
@@ -52,7 +51,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **CS 542:** Introduction to Software Security **(.)**  
 <span class="sidenote">$^{\bold 1}$Dropped amidst recruitment season.</span>
 \- ~~**ECON 521:** Game Theory and Economic Analysis~~$^{\tiny\bold 1}$  
-\- (💼) SWE Intern, Morgridge Institute of Research  
+\- (💼) SWE Intern, Center for High-Throughput Computing  
 \- (🔬) Research, [UW CONNECT](https://uwconnect.ece.wisc.edu/): Data visualization
 
 ## spring '24 (*)
@@ -62,7 +61,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **ECON 301:** Intermediate Microeconomic Theory  
 \- **ASIAN 357:** Japanese Ghost Stories  
 \- **MUSIC 113:** Music in Performance    
-\- (💼) Sysadmin Intern, Morgridge Institute of Research   
+\- (💼) Sysadmin Intern, Center for High-Throughput Computing  
 \- (💼) TA, CS 538
 
 ## fall '23 (\*\***)
@@ -72,7 +71,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **ECON 111:** Principles of Economics **(!)**  
 \- **HISTORY 143:** History of Race and Inequality in Urban America  
 \- **MUSIC 113:** Music in Performance  
-\- (💼) Sysadmin Intern, Morgridge Institute of Research   
+\- (💼) Sysadmin Intern, Center for High-Throughput Computing  
 
 ## spring '23 (***)
 \- **CS 354:** Machine Organization and Programming  
