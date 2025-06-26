@@ -3,7 +3,18 @@ title: UW-Madison Course Reviews
 enableToc: true
 ---
 
-This is a comprehensive list of every single class I've taken at UW-Madison. I intend for this post to give people an insight into how I balanced coursework with part-time work and extracurriculars as an undergraduate student. Each semester has a star rating assigned to it which corresponds with how difficult the semester was -- more stars imply greater difficulty. 
+This is a comprehensive list of every single class I've taken at UW-Madison. I intend to provide an insight into how I balanced coursework with part-time work and extracurriculars as a CS/math double major. 
+
+I front-loaded my technical classes (especially the introductory ones) towards freshman/sophomore year mainly for recruiting purposes. I wanted to take a wide breadth of CS courses so I would have more experience to pull from when interviewing for internships. This also worked out because I learned pretty early on what topics I enjoyed studying, which in turn helped me pick future courses.
+
+I tended to take heavier technical loads in the fall semester compared to the spring semester, although this is not something I'd recommend. Each of my fall semesters ended up becoming more difficult due to the increasingly stressful internship recruitment seasons commitments. I would recommend taking lighter courseloads in the fall if you expect to be in the weeds with recruitment, and heap on more in the spring when there's not much going on.
+
+I've heard advice that you should only take 2 technical courses each semester and the other 3 courses (assuming 15 credits) should be general education courses. I didn't listen to this because I felt like most of the courses were manageable as long as you were willing to sink time into them.
+
+A few similar blog posts from other UPL folk:  
+[David](https://dteather.com/blogs/madison-class-rankings/) | [Sam](https://baumohl.dev/blog/uw-madison-courses/) | [Jiamu](https://jiamuchai.com/courses/)
+
+---
 
 I've denoted part-time work or internships I held during the semester as 💼 and research related projects as 🔬. I've also noted courses that I particularly enjoyed as (^), courses that were particularly time consuming as (!), and courses that I largely disliked as (.).
 
