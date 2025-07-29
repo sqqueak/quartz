@@ -4,7 +4,6 @@ enableToc: false
 comments: false
 ---
 
-## about
 I am a [student](/uw-madison-course-review) at the University of Wisconsin-Madison studying computer science and mathematics. I'm mainly interested in programming languages and compilers, among other low-level topics like operating systems and computer networks. I'm currently part of the [madPL](https://madpl.cs.wisc.edu/) group, advised by [Ethan Cecchetti](https://cecchetti.sites.cs.wisc.edu/).
 
 Most recently, I'm at Two Sigma as a software engineer intern in the Securities division on the Trade Routing & Execution team. I've have the wonderful privilege of working in a handful of different roles across various institutions, including:
