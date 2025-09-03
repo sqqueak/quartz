@@ -16,7 +16,7 @@ I've had the wonderful privilege of working in a handful of different roles acro
 - **Mandli Communications** (Application development)
 - **UW CONNECT Lab** (Data visualization) 
 
-Outside of school/work, my main hobby is puzzle-solving. I like [coding games](https://battlecode.org/), [logic puzzles](https://www.brainbashers.com/), and whatever [these](https://cdn.cs50.net/2020/x/events/puzzles/puzzles.pdf) are called. 
+Outside of school/work, my main hobby is puzzle-solving. I like [coding games](https://battlecode.org/), [logic puzzles](https://www.brainbashers.com/), and whatever [these](https://cdn.cs50.net/2020/x/events/puzzles/puzzles.pdf) are called.
 
 <!-- ## contact
 I like meeting interesting people -- if you want to say hi or grab lunch with me, send an email at `hello at emilyyao dot me`. 
