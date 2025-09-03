@@ -40,3 +40,11 @@ label.margin-toggle:not(.sidenote-number) {
             position: relative;
         }
 }
+
+p.subtext {
+    text-align:center; 
+    font-size:0.7rem; 
+    margin:0;
+    padding:0;
+    font-style:italic;
+}
