@@ -37,35 +37,19 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ConditionalRender({
-      component: Component.ContentMeta({ showReadingTime: false }),
+      component: Component.ContentMeta({ showReadingTime: false, showComma: true }),
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.ConditionalRender({
-      component: Component.ContentMeta(),
+      component: Component.ContentMeta({ showReadingTime: true, showComma: true }),
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.TagList(),
   ],
   left: [
-    // Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    // Component.Flex({
-    //   components: [
-    //     {
-    //       Component: Component.Search(),
-    //       grow: true,
-    //     },
-    //     { Component: Component.Darkmode() },
-    //     { Component: Component.ReaderMode() },
-    //   ],
-    // }),
     Component.DesktopOnly(Component.TableOfContents()),
-    // Component.Explorer(),
   ],
-  right: [
-    // Component.Graph(),
-    // Component.Backlinks(),
-  ],
+  right: [],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -75,19 +59,6 @@ export const defaultListPageLayout: PageLayout = {
     Component.Breadcrumbs(), 
     Component.ContentMeta()
   ],
-  left: [
-    // Component.PageTitle(),
-    // Component.MobileOnly(Component.Spacer()),
-    // Component.Flex({
-    //   components: [
-    //     {
-    //       Component: Component.Search(),
-    //       grow: true,
-    //     },
-    //     { Component: Component.Darkmode() },
-    //   ],
-    // }),
-    // Component.Explorer(),
-  ],
+  left: [],
   right: [],
 }
