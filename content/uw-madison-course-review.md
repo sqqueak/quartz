@@ -1,0 +1,116 @@
+---
+title: UW-Madison Course Reviews
+enableToc: true
+---
+
+This is a comprehensive list of every single class I've taken at UW-Madison. I intend to provide an insight into how I balanced coursework with part-time work and extracurriculars as a CS/math double major. 
+
+I front-loaded my technical classes (especially the introductory ones) towards freshman/sophomore year mainly for recruiting purposes. I wanted to take a wide breadth of CS courses so I would have more experience to pull from when interviewing for internships. This also worked out because I learned pretty early on what topics I enjoyed studying, which in turn helped me pick future courses.
+
+I tended to take heavier technical loads in the fall semester compared to the spring semester, although this is not something I'd recommend. Each of my fall semesters ended up becoming more difficult due to the increasingly stressful internship recruitment seasons commitments. I would recommend taking lighter courseloads in the fall if you expect to be in the weeds with recruitment, and heap on more in the spring when there's not much going on.
+
+I've heard advice that you should only take 2 technical courses each semester and the other 3 courses (assuming 15 credits) should be general education courses. I didn't listen to this because I felt like most of the courses were manageable as long as you were willing to sink time into them.
+
+A few similar blog posts from other UPL folk:  
+[David](https://dteather.com/blogs/madison-class-rankings/) | [Sam](https://baumohl.dev/blog/uw-madison-courses/) | [Jiamu](https://jiamuchai.com/courses/)
+
+---
+
+I've denoted part-time work or internships I held during the semester as 💼 and research related projects as 🔬. I've also noted courses that I particularly enjoyed as (^), courses that were particularly time consuming as (!), and courses that I largely disliked as (.).
+
+<!-- ## overview
+**CS:**  
+\- 252: Intro to Computer Engineering  
+\- 300: Programming II  
+\- 354: Machine Organization \& Programming  
+\- 400: Programming III  
+\- 536: Compilers  
+\- 537: Operating Systems  
+\- 538: Programming Languages  
+\- 540: Artificial Intelligence  
+\- 544: Big Data
+\- 542: Software Security  
+\- 557: Parallel \& Throughput-Optimized Programming  
+\- 577: Algorithms  
+\- 642: Information Security
+\- 704: Principles of Programming Languages  
+\- 736: Advanced Operating Systems
+\- 859: Systems Verification  
+
+**MATH:**  
+\- 234: Multivariable Calculus  
+\- 341: Linear Algebra  
+\- 431: Probability Theory  
+\- 475: Combinatorics  
+\- 521: Analysis I  
+\- 525: Linear Optimization  
+\- 632: Stochastic Processes  
+\- 728: Integer Optimization
+
+--- -->
+
+## fall '25 (**)
+\- **CS 736:** Advanced Operating Systems **(!^)**  
+\- **CS 544:** Introduction to Big Data Systems  
+\- (🔬) Research, [madPL](https://madpl.cs.wisc.edu/): Rust compiler extensions  
+
+## spring '25 (*)
+\- **CS 642:** Introduction to Information Security  
+\- **ECON 302:** Intermediate Macroeconomic Theory  
+\- **CLASSICS 270:** Classical Mythology    
+\- **HORT 240:** The Science of Cannabis    
+\- **MUSIC 113:** Music in Performance  
+\- (💼) SWE Intern, Center for High-Throughput Computing  
+\- (🔬) Research, [madPL](https://madpl.cs.wisc.edu/): Proving confluence over language syntax  
+
+## fall '24 (***)
+\- **CS 704:** Principles of Programming Languages **(^)**  
+\- **CS 839:** Systems Verification  
+\- **CS 537:** Introduction to Operating Systems **(!)**  
+\- **CS 542:** Introduction to Software Security **(.)**  
+<span class="sidenote">$^{\bold 1}$Dropped amidst recruitment season.</span>
+\- ~~**ECON 521:** Game Theory and Economic Analysis~~$^{\tiny\bold 1}$  
+\- (💼) SWE Intern, Center for High-Throughput Computing  
+\- (🔬) Research, [UW CONNECT](https://uwconnect.ece.wisc.edu/): Data visualization
+
+## spring '24 (*)
+\- **CS 536:** Introduction to Compilers **(^)**  
+\- **CS 557:** Parallel & Throughput-Optimized Programming **(.)**  
+\- **MATH 728:** Integer Optimization  
+\- **ECON 301:** Intermediate Microeconomic Theory  
+\- **ASIAN 357:** Japanese Ghost Stories  
+\- **MUSIC 113:** Music in Performance    
+\- (💼) Sysadmin Intern, Center for High-Throughput Computing  
+\- (💼) TA, CS 538
+
+## fall '23 (\*\***)
+\- **[CS 538](/cs538):** Introduction to Theory and Design of Programming Languages  
+\- **MATH 525:** Introduction to Linear Optimization **(!)**  
+\- **MATH 632:** Introduction to Stochastic Processes **(!^)**  
+\- **ECON 111:** Principles of Economics **(!)**  
+\- **HISTORY 143:** History of Race and Inequality in Urban America  
+\- **MUSIC 113:** Music in Performance  
+\- (💼) Sysadmin Intern, Center for High-Throughput Computing  
+
+## spring '23 (***)
+\- **CS 354:** Machine Organization and Programming  
+\- **CS 540:** Introduction to Artificial Intelligence **(.)**  
+\- **CS 577:** Introduction to Algorithms  
+\- **MATH 431:** Introduction to the Theory of Probability  
+\- **MATH 521:** Analysis I **(!)**  
+\- (🔬) Research, [Skunkworks](https://skunkworks.engr.wisc.edu/): AI Image generation models
+
+## fall '22 (*)
+\- **CS 252:** Introduction to Computer Engineering  
+\- **MATH 475:** Introduction to Combinatorics **(^)**  
+\- **ECE 537:** Communication Networks **(^)**  
+\- **PHYSICS 201:** General Physics **(.)**  
+\- (🔬) Research, [ML4ER](https://skunkworks.engr.wisc.edu/informatics-skunkworks-education-course/): ML workflows
+
+## pre-college
+\- **CS 300:** Programming II (SU '20)  
+\- **CS 400:** Programming III (FA '20)  
+\- **ECE 203:** Signals, Information, and Computation (SU '21)  
+\- **MATH 20804232:** Calculus & Analytic Geometry 2 (SU '21) `Madison College`  
+\- **MATH 234:** Calculus - Functions of Several Variables (FA '21)  
+\- **MATH 341:** Linear Algebra (SP '22)
