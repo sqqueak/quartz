@@ -1,6 +1,7 @@
 ---
 title: UW-Madison Course Reviews
 enableToc: true
+date: 2025-11-20
 ---
 
 This is a comprehensive list of every single class I've taken at UW-Madison. I intend to provide an insight into how I balanced coursework with part-time work and extracurriculars as a CS/math double major. 
@@ -28,13 +29,13 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- 537: Operating Systems  
 \- 538: Programming Languages  
 \- 540: Artificial Intelligence  
-\- 544: Big Data
+\- 544: Big Data  
 \- 542: Software Security  
 \- 557: Parallel \& Throughput-Optimized Programming  
 \- 577: Algorithms  
-\- 642: Information Security
+\- 642: Information Security  
 \- 704: Principles of Programming Languages  
-\- 736: Advanced Operating Systems
+\- 736: Advanced Operating Systems  
 \- 859: Systems Verification  
 
 **MATH:**  

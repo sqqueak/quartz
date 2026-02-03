@@ -1,5 +1,6 @@
 ---
 title: Subtyping
+date: 2024-04-15
 ---
 
 ## Questions

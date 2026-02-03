@@ -33,15 +33,15 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ArticleTitle(),
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
+      component: Component.Breadcrumbs({ spacerSymbol: "/" }),
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ConditionalRender({
-      component: Component.ContentMeta({ showReadingTime: false, showComma: true }),
+      component: Component.ContentMeta({ showReadingTime: false }),
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.ConditionalRender({
-      component: Component.ContentMeta({ showReadingTime: true, showComma: true }),
+      component: Component.ContentMeta(),
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.TagList(),
@@ -56,7 +56,7 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.ArticleTitle(),
-    Component.Breadcrumbs(), 
+    Component.Breadcrumbs({ spacerSymbol: "/" }),
     Component.ContentMeta()
   ],
   left: [],

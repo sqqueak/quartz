@@ -27,7 +27,7 @@ I've had the wonderful privilege of working in a handful of different roles acro
 My main hobby is puzzle-solving. I like [coding games](https://battlecode.org/), [logic puzzles](https://www.brainbashers.com/), and whatever [these](https://cdn.cs50.net/2020/x/events/puzzles/puzzles.pdf) are called.
 
 
-## writing
+## blog
 <!-- - Rust compiler modifications: [zkStruDul: A Novel Endpoint Projection Compiler](/zkstrudul.md) -->
 - My 3.5 year course load: [UW-Madison Course Review](/uw-madison-course-review.md)
 - Internship technical blog: [Manifests for Protocol Compatibility](/manifests-for-protocol-compatibility.md)
