@@ -1,9 +1,18 @@
 ---
 title: UW-Madison Course Reviews
 enableToc: true
-date: 2025-11-20
+date: 2026-03-27
 ---
 
+<img src="images/degree_map.svg" alt="" width="100" style="
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+"/>
+<p class="subtext">My degree map.</p>
+
+## semesters
 This is a comprehensive list of every single class I've taken at UW-Madison. I intend to provide an insight into how I balanced coursework with part-time work and extracurriculars as a CS/math double major. 
 
 I front-loaded my technical classes (especially the introductory ones) towards freshman/sophomore year mainly for recruiting purposes. I wanted to take a wide breadth of CS courses so I would have more experience to pull from when interviewing for internships. This also worked out because I learned pretty early on what topics I enjoyed studying, which in turn helped me pick future courses.
@@ -50,12 +59,12 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 
 --- -->
 
-## fall '25 (**)
+### fall '25 (**)
 \- **CS 736:** Advanced Operating Systems **(!^)**  
 \- **CS 544:** Introduction to Big Data Systems  
 \- (🔬) Research, [madPL](https://madpl.cs.wisc.edu/): Rust compiler extensions  
 
-## spring '25 (*)
+### spring '25 (*)
 \- **CS 642:** Introduction to Information Security  
 \- **ECON 302:** Intermediate Macroeconomic Theory  
 \- **CLASSICS 270:** Classical Mythology    
@@ -64,7 +73,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- (💼) SWE Intern, Center for High-Throughput Computing  
 \- (🔬) Research, [madPL](https://madpl.cs.wisc.edu/): Proving confluence over language syntax  
 
-## fall '24 (***)
+### fall '24 (***)
 \- **CS 704:** Principles of Programming Languages **(^)**  
 \- **CS 839:** Systems Verification  
 \- **CS 537:** Introduction to Operating Systems **(!)**  
@@ -74,7 +83,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- (💼) SWE Intern, Center for High-Throughput Computing  
 \- (🔬) Research, [UW CONNECT](https://uwconnect.ece.wisc.edu/): Data visualization
 
-## spring '24 (*)
+### spring '24 (*)
 \- **CS 536:** Introduction to Compilers **(^)**  
 \- **CS 557:** Parallel & Throughput-Optimized Programming **(.)**  
 \- **MATH 728:** Integer Optimization  
@@ -84,7 +93,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- (💼) Sysadmin Intern, Center for High-Throughput Computing  
 \- (💼) TA, CS 538
 
-## fall '23 (\*\***)
+### fall '23 (\*\***)
 \- **[CS 538](/cs538):** Introduction to Theory and Design of Programming Languages  
 \- **MATH 525:** Introduction to Linear Optimization **(!)**  
 \- **MATH 632:** Introduction to Stochastic Processes **(!^)**  
@@ -93,7 +102,7 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **MUSIC 113:** Music in Performance  
 \- (💼) Sysadmin Intern, Center for High-Throughput Computing  
 
-## spring '23 (***)
+### spring '23 (***)
 \- **CS 354:** Machine Organization and Programming  
 \- **CS 540:** Introduction to Artificial Intelligence **(.)**  
 \- **CS 577:** Introduction to Algorithms  
@@ -101,14 +110,14 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **MATH 521:** Analysis I **(!)**  
 \- (🔬) Research, [Skunkworks](https://skunkworks.engr.wisc.edu/): AI Image generation models
 
-## fall '22 (*)
+### fall '22 (*)
 \- **CS 252:** Introduction to Computer Engineering  
 \- **MATH 475:** Introduction to Combinatorics **(^)**  
 \- **ECE 537:** Communication Networks **(^)**  
 \- **PHYSICS 201:** General Physics **(.)**  
 \- (🔬) Research, [ML4ER](https://skunkworks.engr.wisc.edu/informatics-skunkworks-education-course/): ML workflows
 
-## pre-college
+### pre-college
 \- **CS 300:** Programming II (SU '20)  
 \- **CS 400:** Programming III (FA '20)  
 \- **ECE 203:** Signals, Information, and Computation (SU '21)  
