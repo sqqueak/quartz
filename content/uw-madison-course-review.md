@@ -10,7 +10,7 @@ date: 2026-03-27
   margin-right: auto;
   width: 100%;
 "/>
-<p class="subtext">My degree map.</p>
+<p class="subtext">Flowchart for my major-relevant classes.</p>
 
 ## semesters
 This is a comprehensive list of every single class I've taken at UW-Madison. I intend to provide an insight into how I balanced coursework with part-time work and extracurriculars as a CS/math double major. 
@@ -124,3 +124,63 @@ I've denoted part-time work or internships I held during the semester as 💼 an
 \- **MATH 20804232:** Calculus & Analytic Geometry 2 (SU '21) `Madison College`  
 \- **MATH 234:** Calculus - Functions of Several Variables (FA '21)  
 \- **MATH 341:** Linear Algebra (SP '22)
+
+---
+
+## ranking
+It recently came to my attention that the suspicious spike in activity on my website these past few weeks was most likely not crawlers or bots, and more likely correlated with students who are trying to figure out what classes they want to take for the upcoming semester. I realize my course review is relatively bare-bones so I've made an effort to provide some more detailed information about all of the classes I've took.
+
+I don't believe that tierlists accurately capture how good a class is-- if I rank something low, is it because it was a bad class or because it just wasn't something I found interesting? Instead of creating a tierlist, I've mapped all of my classes onto a 2D grid where the X-axis represents the difficulty/intensity of the class and the Y-axis represents how interesting I personally found the class.
+
+<img src="images/Class-Diagram.svg" alt="" width="100" style="
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+"/>
+<p class="subtext">Novelty (Y-axis) versus difficulty (X-axis) of my classes.</p>
+
+Some additional commentary on classes I really liked or disliked:
+
+### CS 400
+I have fond memories of this class. I know a lot of people don't, but back when I took it (Fall 2020) I really enjoyed the lectures (Florian) and the projects. I felt like this class convinced me that I genuinely enjoyed writing code.  
+
+### CS 252
+I don't remember anything from this class except the IEEE floating point standard and that despite promising myself that I'd go to every lecture like a good college student should, that this was an exception I was willing to make.
+
+### ECE 537
+I didn't take any other ECE classes so I'm lumping this in here. I took this class with Bhuvana Krishnaswamy who is an amazing lecturer. She does whiteboard lectures which makes the content really engaging (compared to all of the stories I've heard about how painfully boring the CS networks class is). The class covers the TCP/IP network stack and focuses pretty heavily on the transport layer (especially TCP). The grade is mostly made up of projects which are about measuring some network data which were fun but not particularly memorable. In retrospect, I don't find networks all that interesting anymore but I would take this class again just to listen to Krishnaswamy give her lectures.
+  
+### CS 540
+I took this before LLMs took off. I think they've reworked this class every semester since then so my experience most likely isn't relevant anymore. This class was a mess. Despite not having any math prerequisites, they just tossed unintelligible probability, linear algebra, statistics, and multi-variable calculus at you on these meaty densely packed slide presentations. This is coming from someone who *took these classes already*! This class is also a survey course, which means they teach you a little bit of everything. Because the content changed every week, you ended up actually learning nothing because nothing was ever covered in depth enough for you to internalize it. Almost everyone gets 100% on all of the projects so the exams end up being the only determining factor for your grade, and the exam is just a bunch of multiple choice questions about things that may or may not have been mentioned once, for about 10 seconds, in the lectures. I stopped going to this class after the midterm, there were no recorded lectures, no textbook, I just printed and annotated every single slide before the final exam and got around 75% and left with an A. This class made me hate ML/AI and I actively avoided doing anything AI-related afterwards.  
+  
+### CS 577
+In good faith I will say this class is fine. It's just something you have to get out of the way. I had 5 CS/math classes during the semester I was taking this and I ended up just sacrificing this class on the altar to keep afloat in the other ones-- as in I gave about a half-hearted effort to write something competent down each homework and called it done. The problem was the final (only) exam which was worth some-45%. I don't recommend doing what I'm about to say! But this is my experience-- I bought the online textbook and spent two weeks before the exam studying in three increments of four hours each (8am-12pm, 1pm-5pm, 6pm-10pm). I went through the whole textbook, all of the homeworks, and probably multiple dozens of hours of online YouTube videos. To this day I have the matrix multiplication exponent of $n^{2.37}$ burned into my brain. I scored an upper quartile on the final and walked away with an A but those two weeks were some of the busiest weeks I had in college. I don't have any particular grand takeaways from this class other than it temporarily helped me do LeetCode a lot better than if I had tried to learn knapsack on my own.
+
+### CS 542  
+This class is flipped classroom format (watch lectures at home, do homework in class with your peers) which I am not at all a fan of. I understand the pedagogical reason for having flipped classrooms but I have not taken a class that has been able to pull this off well ($N=2$). This class covers multiple kinds of software bugs with a bug focus on injection and web attacks. The homeworks focus on either successfully attacking or preventing an attack on a piece of software. I actually learned a ton from the homeworks because they were very hands-on-- but that doesn't change the fact that this class had the worst homework specs I've ever seen for any class I've ever taken. I went to office hours multiple times to ask for clarifications on things and would get told a different answer from a different TA each time. In one instance, I went to OH to ask a question on the assignment, got told that I should follow a certain format, left for an hour to do the homework according to that format, came back to OH to make sure I followed the format right, and was told that the format was wrong and that I wasn't supposed to be doing that at all. I still remember being cooped up in the CSL (back when it existed) stuck trying to decipher whether the bug was because I couldn't read, the professor couldn't write, or my code didn't work. The difficulty of this class didn't come from the content, it came from the seemingly lack of organization on the class itself which was extremely frustrating. To touch on the flipped classroom format-- I don't think I had any takeaways except that the entire classroom had a palpable "I don't want to do this" energy which made it all the more difficult to actually care about the assignment. It's pretty hard to work on a project in class and learn something from it when not a single person in that class wants to be there. It's unfortunate because I've been to a few talks by Bart Miller on fuzz testing (which was covered in the class) and his story is really interesting and I think he's a great speaker, but this class was not my cup of tea.
+
+### CS 704
+I took this class with Ethan Cecchetti who gave my favorite lecture in college ([State](https://cecchetti.sites.cs.wisc.edu/cs704/2024fa/notes/lec20-state.pdf)). He had chalkboard lectures which lends itself to this class being a math class wrapped in the cloak of a CS class, but I found the way that he structured the ideas to be more approachable than a lot of the other proof-y theoretical classes I've taken. Content-wise, this class covers a lot of the theoretical foundations for PL research in a way that the undergrad class (538) doesn't. I would also retake this class just for the lectures, but Ethan was my research advisor for a few semesters so I think I'm biased in that regard.
+
+<!-- 
+\- 536: Compilers  
+\- 537: Operating Systems  
+\- 538: Programming Languages  
+\- 544: Big Data  
+\- 557: Parallel \& Throughput-Optimized Programming  
+\- 642: Information Security  
+\- 704: Principles of Programming Languages  
+\- 736: Advanced Operating Systems  
+\- 859: Systems Verification  
+
+**MATH:**  
+\- 234: Multivariable Calculus  
+\- 341: Linear Algebra  
+\- 431: Probability Theory  
+\- 475: Combinatorics  
+\- 521: Analysis I  
+\- 525: Linear Optimization  
+\- 632: Stochastic Processes  
+\- 728: Integer Optimization -->
+
