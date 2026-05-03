@@ -41,3 +41,9 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+todo
+- left side googleslides
+- footnotes if sidenotes doesn't work
+- inline images of googleslides doesn't work
+- also just inline images in general

@@ -1,0 +1,207 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+
+// Filter to only h2 and h3
+const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{tocHeadings.length > 0 && (
+  <nav class="toc">
+    <h2 class="text-md font-semibold mb-1">Table of Contents</h2>
+    <ul class="text-sm toc-list">
+      {tocHeadings.map((heading) => (
+        <li class:list={[
+          heading.depth === 3 && 'ml-4'
+        ]}>
+          <a
+            href={`#${heading.slug}`}
+            data-for={heading.slug}
+            class="toc-link block transition-opacity hover:opacity-80"
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc {
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    margin-bottom: 0.1rem;
+  }
+
+  /* Cancel the .prose-blog ul li + li { margin-top: 0.5rem } rule that
+     would otherwise widen mobile TOC entry gaps vs the sidebar version. */
+  .toc-list li + li {
+    margin-top: 0;
+  }
+
+  @media (min-width: 1280px) {
+    .toc {
+      position: sticky;
+      top: 2rem;
+    }
+  }
+
+  /* No background box; instead, give the TOC text a soft 5px halo in the
+     page background color so it stays legible against content behind it.
+     Multiple stacked blurred shadows compound to near-full opacity. */
+  :global(.toc-sidebar) .toc,
+  :global(.toc-sidebar) .toc h2,
+  :global(.toc-sidebar) .toc-link {
+    text-shadow:
+      0 0 5px var(--color-background-light),
+      0 0 5px var(--color-background-light),
+      0 0 5px var(--color-background-light),
+      0 0 5px var(--color-background-light),
+      0 0 5px var(--color-background-light);
+  }
+
+  :global(.dark .toc-sidebar) .toc,
+  :global(.dark .toc-sidebar) .toc h2,
+  :global(.dark .toc-sidebar) .toc-link {
+    text-shadow:
+      0 0 5px var(--color-background-dark),
+      0 0 5px var(--color-background-dark),
+      0 0 5px var(--color-background-dark),
+      0 0 5px var(--color-background-dark),
+      0 0 5px var(--color-background-dark);
+  }
+
+  /* Default (sidebar, out-of-view): light grey — a lighter mix of
+     secondary toward the page background. */
+  .toc-link {
+    color: color-mix(in srgb, var(--color-secondary-light) 50%, var(--color-background-light));
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  :global(.dark) .toc-link {
+    color: color-mix(in srgb, var(--color-secondary-dark) 50%, var(--color-background-dark));
+  }
+
+  /* Sidebar (left side): in-view entry darkens to medium grey (secondary). */
+  :global(.toc-sidebar) .toc-link.in-view {
+    color: var(--color-secondary-light);
+  }
+
+  :global(.dark .toc-sidebar) .toc-link.in-view {
+    color: var(--color-secondary-dark);
+  }
+
+  /* Mobile (TOC at top of page): every entry is medium grey, no fading. */
+  :global(.toc-mobile) .toc-link {
+    color: var(--color-secondary-light);
+  }
+
+  :global(.dark .toc-mobile) .toc-link {
+    color: var(--color-secondary-dark);
+  }
+
+  .toc-link:hover {
+    color: var(--color-accent-light);
+  }
+
+  :global(.dark) .toc-link:hover {
+    color: var(--color-accent-dark);
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .toc::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .toc::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .toc::-webkit-scrollbar-thumb {
+    background: var(--color-secondary-light);
+    border-radius: 2px;
+  }
+
+  :global(.dark) .toc::-webkit-scrollbar-thumb {
+    background: var(--color-secondary-dark);
+  }
+</style>
+
+<script>
+  const SIDEBAR_MIN_WIDTH = 1370;
+
+  function clearInView() {
+    document
+      .querySelectorAll('a.toc-link.in-view')
+      .forEach((link) => link.classList.remove('in-view'));
+  }
+
+  function setupTocScrollSpy() {
+    if (!window.matchMedia(`(min-width: ${SIDEBAR_MIN_WIDTH}px)`).matches) {
+      clearInView();
+      return () => {};
+    }
+
+    const headers = document.querySelectorAll<HTMLElement>(
+      '.blog-content h2[id], .blog-content h3[id]'
+    );
+    if (!headers.length) return () => {};
+
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        const slug = entry.target.id;
+        const links = document.querySelectorAll(`a.toc-link[data-for="${slug}"]`);
+        const windowHeight = entry.rootBounds?.height;
+        if (!windowHeight || !links.length) continue;
+
+        if (entry.boundingClientRect.y < windowHeight) {
+          links.forEach((link) => link.classList.add('in-view'));
+        } else {
+          links.forEach((link) => link.classList.remove('in-view'));
+        }
+      }
+    });
+
+    headers.forEach((h) => observer.observe(h));
+    return () => {
+      observer.disconnect();
+      clearInView();
+    };
+  }
+
+  let cleanup = setupTocScrollSpy();
+
+  document.addEventListener('astro:page-load', () => {
+    cleanup?.();
+    cleanup = setupTocScrollSpy();
+  });
+
+  let resizeTimer: ReturnType<typeof setTimeout>;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      cleanup?.();
+      cleanup = setupTocScrollSpy();
+    }, 150);
+  });
+</script>

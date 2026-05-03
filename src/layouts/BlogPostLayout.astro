@@ -1,0 +1,237 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import GiscusComments from '../components/GiscusComments.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  tags?: string[];
+  headings: Heading[];
+}
+
+const { title, description, pubDate, updatedDate, tags, headings } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+
+const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="prose-blog">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-1 font-serif leading-tight">{title}</h1>
+      <div style="margin-top: -0.7rem; margin-bottom: 0.3rem;">
+        <Breadcrumbs items={[
+          { label: '~', href: '/' },
+          { label: 'Blog', href: '/blog' },
+          { label: title }
+        ]} />
+      </div>
+      <time class="text-sm text-secondary-light dark:text-secondary-dark" style="display: block;">
+        {formattedDate}
+      </time>
+      <!-- {formattedUpdatedDate && (
+        <p class="text-sm text-secondary-light dark:text-secondary-dark">
+          Updated {formattedUpdatedDate}
+        </p>
+      )} -->
+      <!-- {tags && tags.length > 0 && (
+        <div class="flex gap-2 mt-3">
+          {tags.map((tag) => (
+            <span class="text-xs px-2 py-1 bg-surface-light dark:bg-surface-dark rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )} -->
+    </header>
+
+    <aside class="toc-mobile">
+      <TableOfContents headings={headings} />
+    </aside>
+
+    <div class="blog-content">
+      <slot />
+    </div>
+
+    <section class="sidenote-footnotes" aria-label="Footnotes" style="display:none;"></section>
+
+    <GiscusComments />
+  </article>
+
+  <aside class="toc-sidebar">
+    <TableOfContents headings={headings} />
+  </aside>
+</BaseLayout>
+
+<style>
+  .sidenote-footnotes {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(153, 152, 148, 0.2);
+    font-size: 0.875rem;
+  }
+
+  :global(.dark) .sidenote-footnotes {
+    border-top-color: rgba(212, 212, 212, 0.2);
+  }
+
+  .sidenote-footnotes ol {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    list-style-type: decimal;
+  }
+
+  .sidenote-footnotes li {
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary-light);
+  }
+
+  :global(.dark) .sidenote-footnotes li {
+    color: var(--color-secondary-dark);
+  }
+
+  .sidenote-footnotes .fn-backlink {
+    color: var(--color-accent-light);
+    text-decoration: none;
+    margin-left: 0.25rem;
+  }
+
+  :global(.dark) .sidenote-footnotes .fn-backlink {
+    color: var(--color-accent-dark);
+  }
+</style>
+
+<script>
+  function setupSidenotes() {
+    const isWide = window.innerWidth >= 1100;
+    const footnoteSection = document.querySelector('.sidenote-footnotes') as HTMLElement | null;
+    if (!footnoteSection) return;
+
+    if (isWide) {
+      footnoteSection.style.display = 'none';
+      footnoteSection.innerHTML = '';
+      // Restore inline sidenotes (shown via CSS on wide screens)
+      return;
+    }
+
+    const sidenotes = document.querySelectorAll<HTMLElement>('.sidenote');
+    if (!sidenotes.length) {
+      footnoteSection.style.display = 'none';
+      return;
+    }
+
+    // Build footnote list
+    const ol = document.createElement('ol');
+    sidenotes.forEach((sidenote) => {
+      const id = sidenote.dataset.id ?? '';
+      const body = sidenote.querySelector('.sidenote-body');
+      if (!body) return;
+
+      const li = document.createElement('li');
+      li.id = `fn-${id}`;
+
+      const contentSpan = document.createElement('span');
+      contentSpan.innerHTML = body.innerHTML;
+
+      const backlink = document.createElement('a');
+      backlink.href = `#sidenote-ref-${id}`;
+      backlink.className = 'fn-backlink';
+      backlink.textContent = '↩';
+      backlink.setAttribute('aria-label', 'Back to reference');
+
+      li.appendChild(contentSpan);
+      li.appendChild(backlink);
+      ol.appendChild(li);
+
+      // Make the inline ref a link to the footnote
+      const ref = document.getElementById(`sidenote-ref-${id}`);
+      if (ref) {
+        const a = document.createElement('a');
+        a.href = `#fn-${id}`;
+        a.style.color = 'inherit';
+        a.style.textDecoration = 'none';
+        a.textContent = ref.textContent ?? '';
+        ref.textContent = '';
+        ref.appendChild(a);
+      }
+    });
+
+    const title = document.createElement('p');
+    title.style.fontWeight = '600';
+    title.textContent = 'Footnotes';
+
+    footnoteSection.innerHTML = '';
+    footnoteSection.appendChild(title);
+    footnoteSection.appendChild(ol);
+    footnoteSection.style.display = 'block';
+  }
+
+  setupSidenotes();
+
+  let resizeTimer: ReturnType<typeof setTimeout>;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setupSidenotes, 100);
+  });
+</script>
+
+<style>
+  /* Mobile TOC - shown on small screens.
+     Pull it up closer to the post header above (which has mb-8 = 2rem). */
+  .toc-mobile {
+    display: block;
+    margin-top: -2.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid;
+    border-color: rgba(153, 152, 148, 0.2);
+  }
+
+  :global(.dark) .toc-mobile {
+    border-color: rgba(212, 212, 212, 0.2);
+  }
+
+  /* Sidebar TOC - positioned on the left */
+  .toc-sidebar {
+    display: none;
+  }
+
+  /* Show sidebar TOC on large screens only.
+     Centered within the left gutter so the gap to the viewport edge and
+     the gap to the article scale together as the window resizes.
+     Each side gap = ((100vw - var(--container-3xl)) / 2 - 250px) / 2.
+     Min-width chosen so both gaps stay >= 25px (with --container-3xl = 48rem):
+     (100vw - 48rem - 500px) / 4 >= 25px  =>  100vw >= 1368px. */
+  @media (min-width: 1370px) {
+    .toc-sidebar {
+      display: block;
+      position: fixed;
+      left: calc((100vw - var(--container-3xl) - 500px) / 4);
+      top: 2.5rem;
+      width: 250px;
+    }
+
+    .toc-mobile {
+      display: none;
+    }
+  }
+</style>

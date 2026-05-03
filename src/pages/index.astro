@@ -1,17 +1,82 @@
 ---
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
+// 3 most recent posts
+const allPosts = await getCollection('blog');
+const recentPosts = allPosts
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="emilyyao.me">
+  <div class="space-y-6">
+    <!-- header -->
+    <article class="prose-blog">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold mb-1 font-serif leading-tight">emilyyao.me</h1>
+        <div style="margin-top: -0.7rem; margin-bottom: 0.3rem;">
+          <Breadcrumbs items={[
+            { label: '~' }
+          ]} />
+        </div>
+        <!-- <time class="text-sm text-secondary-light dark:text-secondary-dark">
+          April 12, 2026
+        </time> -->
+      </header>
+    </article>
+
+    <!-- about -->
+    <section>
+      <div class="mb-2">
+        <h2 class="text-3xl font-serif font-semibold">about</h2>
+      </div>
+      <p class="leading-normal max-w-3xl">
+        I am a software engineer at Two Sigma in NYC. I'm broadly interested in systems engineering, in particular, compilers and operating systems.
+      </p>
+      <p class="leading-normal max-w-3xl mt-4">
+        I completed my undergraduate degree at the University of Wisconsin-Madison where I studied computer science and mathematics. I had the privilege of being part of the <a href="https://madpl.cs.wisc.edu/" class="link" target="_blank" rel="noopener noreferrer">madPL</a> group, advised by <a href="https://cecchetti.sites.cs.wisc.edu/" class="link" target="_blank" rel="noopener noreferrer">Ethan Cecchetti</a>.
+      </p>
+      <p class="leading-normal max-w-3xl mt-4">
+        My main hobby is puzzle-solving. I like <a href="https://battlecode.org/" class="link" target="_blank" rel="noopener noreferrer">coding games</a>, <a href="https://www.brainbashers.com/" class="link" target="_blank" rel="noopener noreferrer">logic puzzles</a>, and whatever <a href="https://cdn.cs50.net/2020/x/events/puzzles/puzzles.pdf" class="link" target="_blank" rel="noopener noreferrer">these</a> are called.
+      </p>
+    </section>
+
+    <!-- blog -->
+    <section>
+      <div class="flex items-end gap-4 mb-2">
+        <h2 class="text-3xl font-serif font-semibold">blog</h2>
+        <a href="/blog" class="link text-sm" style="margin-bottom: 0.15rem;">more →</a>
+      </div>
+
+      <div>
+        {recentPosts.map((post) => (
+          <article>
+            <a href={`/blog/${post.id}`} class="group block">
+              <div class="flex justify-between items-baseline">
+                <p class="text-md transition-opacity group-hover:opacity-80">
+                  {post.data.title}
+                </p>
+                <time class="text-sm text-secondary-light dark:text-secondary-dark ml-4 flex-shrink-0">
+                  {post.data.pubDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  })}
+                </time>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      {recentPosts.length === 0 && (
+        <p class="text-secondary-light dark:text-secondary-dark">
+          No posts yet. Check back soon!
+        </p>
+      )}
+    </section>
+  </div>
+</BaseLayout>

@@ -12,6 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@giscus/react": "^3.1.0",
     "astro": "^6.1.5"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^5.0.3",
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2"
   }
 }

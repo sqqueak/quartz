@@ -1,0 +1,62 @@
+<button
+  id="theme-toggle"
+  class="px-3 py-2 rounded hover:bg-surface-light dark:hover:bg-surface-dark transition-colors"
+  aria-label="Toggle theme"
+>
+  <span id="theme-toggle-light-icon" class="hidden">☀️</span>
+  <span id="theme-toggle-dark-icon" class="hidden">🌙</span>
+</button>
+
+<script>
+  // Theme toggle logic
+  const theme = (() => {
+    // Check localStorage first
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
+    }
+    // Fall back to system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  })();
+
+  // Apply theme on initial load
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+
+  // Update icon visibility
+  const updateIcons = () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+
+    if (isDark) {
+      lightIcon?.classList.remove('hidden');
+      darkIcon?.classList.add('hidden');
+    } else {
+      lightIcon?.classList.add('hidden');
+      darkIcon?.classList.remove('hidden');
+    }
+  };
+
+  updateIcons();
+
+  // Handle toggle button click
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark');
+
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+
+    updateIcons();
+  });
+</script>

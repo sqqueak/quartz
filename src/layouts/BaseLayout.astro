@@ -1,0 +1,49 @@
+---
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  wide?: boolean;
+}
+
+const { title, description = 'personal blog', wide = false } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Prevent flash of wrong theme / layout shift from scrollbar gutter -->
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+
+      document.documentElement.style.scrollbarGutter = 'stable';
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <main class:list={["flex-grow container mx-auto px-4 py-8", wide ? 'max-w-[1600px]' : 'max-w-3xl']}>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
