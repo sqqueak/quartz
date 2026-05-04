@@ -17,9 +17,10 @@ interface Props {
   updatedDate?: Date;
   tags?: string[];
   headings: Heading[];
+  slug: string;
 }
 
-const { title, description, pubDate, updatedDate, tags, headings } = Astro.props;
+const { title, description, pubDate, updatedDate, tags, headings, slug } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -74,7 +75,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 
     <section class="sidenote-footnotes" aria-label="Footnotes" style="display:none;"></section>
 
-    <GiscusComments />
+    <GiscusComments slug={slug} />
   </article>
 
   <aside class="toc-sidebar">

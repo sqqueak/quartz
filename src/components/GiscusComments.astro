@@ -1,8 +1,16 @@
 ---
 // Giscus Comments Component
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+// Match the legacy URL-mapped discussion titles from the previous Quartz site,
+// so existing comments and reactions stay attached to each post.
+const giscusTerm = `https://emilyyao.me/${slug}`;
 ---
 
-<div class="giscus-container mt-8"></div>
+<div class="giscus-container mt-8" data-giscus-term={giscusTerm}></div>
 
 <script>
   function currentTheme() {
@@ -10,8 +18,10 @@
   }
 
   function loadGiscus() {
-    const container = document.querySelector('.giscus-container');
+    const container = document.querySelector<HTMLElement>('.giscus-container');
     if (!container || container.querySelector('script[src*="giscus.app"]')) return;
+
+    const term = container.dataset.giscusTerm ?? window.location.pathname;
 
     const s = document.createElement('script');
     s.src = 'https://giscus.app/client.js';
@@ -21,7 +31,8 @@
     s.setAttribute('data-repo-id', 'R_kgDOHS2WAw');
     s.setAttribute('data-category', 'Announcements');
     s.setAttribute('data-category-id', 'DIC_kwDOHS2WA84CpESS');
-    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-mapping', 'specific');
+    s.setAttribute('data-term', term);
     s.setAttribute('data-strict', '0');
     s.setAttribute('data-reactions-enabled', '1');
     s.setAttribute('data-emit-metadata', '0');

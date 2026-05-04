@@ -24,6 +24,7 @@ const { Content, headings } = await render(post);
   updatedDate={post.data.updatedDate}
   tags={post.data.tags}
   headings={headings}
+  slug={post.id}
 >
   <Content />
 </BlogPostLayout>
