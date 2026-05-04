@@ -59,7 +59,7 @@ const recentPosts = allPosts
                 <p class="text-md transition-opacity group-hover:opacity-80">
                   {post.data.title}
                 </p>
-                <time class="text-sm text-secondary-light dark:text-secondary-dark ml-4 flex-shrink-0">
+                <time class="text-sm ml-4 flex-shrink-0" style="color: var(--text-secondary);">
                   {post.data.pubDate.toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',

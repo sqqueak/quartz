@@ -27,6 +27,16 @@
   --color-accent-dark-dark: #3b8050;     /* tertiary - darker accent */
 }
 
+/* Theme-aware aliases (so inline styles can use a single var that flips
+   between light and dark mode without depending on Tailwind utilities). */
+:root {
+  --text-secondary: var(--color-secondary-light);
+}
+
+:is(.dark) {
+  --text-secondary: var(--color-secondary-dark);
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;
